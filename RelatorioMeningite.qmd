@@ -1,0 +1,104 @@
+---
+title: "Meningite"
+format:
+  html:
+    grid:
+      sidebar-width: 300px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 1.5rem
+    smooth-scroll: true
+    toc: true
+    toc_float: true
+    toc-location: left
+    toc-title: Índice
+    html-math-method: katex
+    theme:
+      light: journal
+      dark: darkly
+lang: pt
+---
+
+
+
+```{r, include=FALSE}
+pacman::p_load(ggplot2, readxl, dygraphs, xts,
+               htmlwidgets, flexdashboard, ggiraph, shiny, lplyr)
+source("CodigoMeningite.R")
+
+```
+
+
+
+# Casos de Meningite
+
+<div style="text-align: justify">
+O gráfico apresenta o número de casos de meningite em Belém-PA ao longo do tempo, evidenciando variações significativas com flutuações marcadas por picos e quedas. Esses picos podem estar relacionados a surtos ou períodos de maior circulação do agente causador da doença, enquanto as quedas sugerem possíveis intervenções de saúde pública, como campanhas de vacinação, maior controle epidemiológico ou outros fatores que limitaram a transmissão. A análise também pode indicar uma influência de padrões sazonais ou mudanças nas condições ambientais e sociais que impactam a incidência da meningite na região. Compreender essas oscilações é crucial para avaliar a eficácia das estratégias de prevenção e controle, identificar vulnerabilidades e planejar ações futuras para reduzir os impactos da doença na população.
+
+## Série Temporal
+
+### Série histórica
+
+::: {.panel-tabset .nav-pills}
+## Energia
+
+```{=html}
+<style>
+div.blue { background-color:#C0BAE5; border-radius: 5px; padding: 25px;}
+</style>
+```
+::: blue
+A análise da série histórica da geração de energia no estado do Pará, abrangendo o período de janeiro de 2010 a dezembro de 2023, revela um panorama abrangente das contribuições das usinas de diferentes fontes.  A partir da participação das usinas hidroelétricas analisadas: Belo Monte, Curuá-Una, Pimentel, São Manoel, Tele Pires e Tucuruí, bem como as usinas fotovoltaicas: PQU PATR FOTOV MMGD, PQU MMPA FOTOV MMGD e PQU PAPA FOTOV MMGD, e a usina térmica PQU PA TERM - CARGA GLOBAL. Através dessa análise, busca-se compreender a evolução e a contribuição de diferentes fontes na matriz energética paraense ao longo desse período significativo com o valor gerado da energia em Gigawatt. É notável um crescimento na geração de energia no estado do Pará nos últimos sete anos, visto na Figura abaixo, motivado pelas novas usinas, principalmente por Belo Monte que começou a participar da geração de energia em 2017.
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+
+dygraph(xts(notifica_meningite$Casos, order.by = notifica_meningite$data), 
+        main = "Casos de Meningite") |> 
+  dyAxis("y", label = "Valores") |> 
+  dyAxis("x", label = "Data") |> 
+  dyOptions(stackedGraph = TRUE)
+
+
+```
+
+## Tabela
+
+```{r}
+#| echo: false
+#| warning: false
+
+girafe(ggobj = grafico, width_svg = 8, height_svg = 5)
+
+```
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
