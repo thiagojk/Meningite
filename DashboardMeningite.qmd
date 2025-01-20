@@ -3,11 +3,6 @@ title: "Meu Dashboard Bonito"
 format: dashboard
 ---
 
-
-
-
-
- 
 ###  {.sidebar}
 
 Sidebar Content
@@ -15,7 +10,6 @@ Sidebar Content
 ```{r, include=FALSE}
 pacman::p_load(ggplot2, readxl, dygraphs, xts,
                htmlwidgets, flexdashboard, ggiraph, shiny, lplyr)
-
 source("CodigoMeningite.R")
 Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
 ```
@@ -35,6 +29,11 @@ dateRangeInput(
 
 ```
 
+
+
+
+
+
 ```{r}
 
 sliderInput(
@@ -50,14 +49,30 @@ sliderInput(
 
 ```
 
+```{r}
+
+
+checkboxGroupInput(
+  inputId = "Ano",
+  label = "Selecione os Anos",
+  choices = c("Todos", unique(notifica_meningite$ano)), # Inclui "Todos" e os anos disponíveis
+  selected = "Todos" # Define "Todos" como selecionado por padrão
+)
+
+```
+
+
+
+
+
 
 
 
 
 # Meningite
 
-## Row {height="20%"}
 
+## Row {height="20%"}
 ```{r}
 #| content: valuebox
 #| title: "Casos Totais"
@@ -69,9 +84,23 @@ notifica_meningite |>
     summarise(total_casos = sum(Casos)) |>
     summarise(total = sum(total_casos)) |> 
     pull(total)
-  
-  
+
 ```
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Anterior"
+#| icon: pencil
+#| color: #22396a
+
+notifica_meningite %>%
+    group_by(ano) %>%
+    summarise(total_casos = sum(Casos)) %>%
+    filter(ano == 2025) %>%
+    pull(total_casos)
+
+```
+
 
 ```{r}
 #| content: valuebox
@@ -84,8 +113,8 @@ notifica_meningite %>%
     summarise(total_casos = sum(Casos)) %>%
     filter(ano == 2020) %>%
     pull(total_casos)
-
 ```
+
 
 ```{r}
 #| content: valuebox
@@ -99,6 +128,12 @@ notifica_meningite %>%
     filter(ano == 2025) %>%
     pull(total_casos)
 
+#| title: "trimestre ano anterior"
+list(
+  icon = "trash",
+  color = "danger",
+  value = 40
+)
 ```
 
 ```{r}

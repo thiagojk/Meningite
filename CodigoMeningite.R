@@ -4,7 +4,6 @@
 
 pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph)
 
-  
 # Carregando dados --------------------------------------------------------
 
 Dados_Meningite <- rio::import("Dados/MENINNET.DBF")
