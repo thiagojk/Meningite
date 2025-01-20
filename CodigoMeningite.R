@@ -2,13 +2,9 @@
 
 # Carregando pacotes ------------------------------------------------------
 
-pacman::p_load(tidyverse, rio, dygraphs, xts)
+pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph)
 
-devtools::install_github("d3plus/d3plus")
-
-
-
-
+  
 # Carregando dados --------------------------------------------------------
 
 Dados_Meningite <- rio::import("Dados/MENINNET.DBF")
@@ -105,25 +101,37 @@ Dados_Meningite <- Dados_Meningite |>
 
 
 notifica_meningite <- Dados_Meningite |> 
-  group_by(DT_NOTIFIC) |> 
+  mutate(ano = year(DT_NOTIFIC),
+         mes = month(DT_NOTIFIC)) |> 
+  group_by(ano, mes) |> 
   summarise(Casos = n())
 
 
-
-
-dygraph(xts(notifica_meningite$Casos, order.by = notifica_meningite$DT_NOTIFIC), 
-        main = "Casos de Meningite") |> 
-  dyAxis("y", label = "Valores") |> 
-  dyAxis("x", label = "Data") 
-
-
-d3plus(data = data, type = "line", id = "category", x = "date", y = "value")
+# Criar uma coluna de data para o eixo X (ano-mês)
+notifica_meningite$data <- as.Date(paste(notifica_meningite$ano, 
+                                         notifica_meningite$mes, "01", sep = "/"), 
+                                   format = "%Y/%m/%d")
 
 
 
-
-
-
+grafico <- notifica_meningite |> 
+  group_by(ano) |> 
+  summarise(total_casos = sum(Casos)) |> 
+  ggplot(aes(x = factor(ano), y = total_casos)) +
+  geom_bar_interactive(
+    stat = "identity", 
+    aes(
+      tooltip = paste("Ano:", ano, "<br>Total de Casos:", total_casos), # Tooltip interativo
+      data_id = ano
+    ),
+    fill = "steelblue"
+  ) +
+  labs(
+    title = "Total de Casos por Ano",
+    x = "Ano",
+    y = "Número de Casos"
+  ) +
+  theme_bw()
 
 
 
