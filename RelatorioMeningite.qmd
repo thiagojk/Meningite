@@ -1,0 +1,240 @@
+---
+title: "Meningite"
+format:
+  html:
+    code-fold: true
+    fig-width: 7
+    fig-height: 3
+    grid:
+      sidebar-width: 300px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 1.5rem
+    smooth-scroll: true
+    toc: true
+    toc_float: true
+    toc-location: left
+    toc-title: Índice
+    html-math-method: katex
+    theme:
+      light: journal
+      dark: darkly
+lang: pt
+---
+
+
+```{r setup, include=FALSE}
+pacman::p_load(ggplot2, readxl, dygraphs, xts,
+               htmlwidgets, flexdashboard, ggiraph, 
+               shiny, kableExtra)
+source("CodigoMeningite.R")
+
+# Tema global para todos os gráficos
+theme_set(theme_bw(base_size = 12)) # Ajuste o tamanho padrão da fonte
+
+```
+
+
+# Relatório Meningite Belém-PA
+
+<div style="text-align: justify">
+A meningite é uma inflamação das meninges, as membranas que envolvem o cérebro e a medula espinhal, causada por diferentes agentes infecciosos, como bactérias, vírus e fungos. Os sintomas mais comuns incluem febre alta, dor de cabeça intensa, rigidez no pescoço e, em casos graves, confusão mental ou convulsões. A meningite bacteriana é uma emergência médica devido ao alto risco de complicações graves, enquanto a meningite viral geralmente é mais branda. O diagnóstico precoce, realizado por meio da análise do líquido cefalorraquidiano (LCR), e o tratamento adequado são cruciais para reduzir a morbimortalidade.
+
+Em Belém, no Pará, a meningite é um desafio significativo de saúde pública, especialmente devido às condições socioeconômicas e climáticas que favorecem a disseminação de doenças infecciosas. A alta densidade populacional em áreas com saneamento básico precário e o clima quente e úmido contribuem para a propagação da doença. A vacinação contra agentes como meningococo e pneumococo tem sido essencial para a prevenção, mas o sistema de saúde ainda enfrenta desafios em relação à vigilância epidemiológica e ao acesso a tratamentos. Este relatório busca abordar aspectos epidemiológicos e estratégias de controle da meningite no contexto local.
+
+
+
+
+
+
+## Série histórica
+
+::: {.panel-tabset .nav-pills .tabset-scrollable}
+### Casos Mensais
+
+```{=html}
+<style>
+div.blue { background-color:#C0BAE5; border-radius: 5px; padding: 25px;}
+</style>
+```
+::: blue
+O gráfico apresenta o número de casos de meningite em Belém-PA ao longo do tempo, evidenciando variações significativas com flutuações marcadas por picos e quedas. Esses picos podem estar relacionados a surtos ou períodos de maior circulação do agente causador da doença, enquanto as quedas sugerem possíveis intervenções de saúde pública, como campanhas de vacinação, maior controle epidemiológico ou outros fatores que limitaram a transmissão. A análise também pode indicar uma influência de padrões sazonais ou mudanças nas condições ambientais e sociais que impactam a incidência da meningite na região. Compreender essas oscilações é crucial para avaliar a eficácia das estratégias de prevenção e controle, identificar vulnerabilidades e planejar ações futuras para reduzir os impactos da doença na população.
+:::
+
+```{r}
+#| echo: false
+#| warning: false
+
+# Criar gráfico dinâmico com dygraphs
+dygraph(casos_meningite_xts, main = "Casos de Meningite") |> 
+  dyAxis("y", label = "Número de Casos") |> 
+  dyAxis("x", label = "Data") |> 
+  dySeries("Casos", label = "Casos Notificados", color = "green") |> 
+  dySeries("Casos_Confirmados", label = "Casos Confirmados", color = "red") |> 
+  dyOptions(stackedGraph = TRUE) # Não empilhar as séries
+
+
+```
+
+### Casos Anuais
+
+
+
+```{=html}
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+```
+::: blue
+
+
+O gráfico apresenta os casos de meningite em Belém entre 2020 e 2025, destacando variações significativas ao longo dos anos. Em 2020, foram registrados 830 casos, mas houve uma queda de 18,9% em 2021, totalizando 673 casos. Em 2022, os números voltaram a subir, registrando 829 casos, quase equivalente a 2020, com um aumento de 23,2% em relação ao ano anterior. Em 2023, houve um crescimento de 9,4%, atingindo 907 casos. Em 2024, o aumento foi ainda mais acentuado, de 22,1%, com 1.107 casos, o maior número registrado no período. No entanto, em 2025, observa-se uma redução abrupta para 22 casos, representando uma queda de 98% em comparação com 2024, o que pode indicar uma intervenção significativa ou uma alteração nos critérios de notificação.
+
+:::
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(ggiraph)
+library(ggplot2)
+library(dplyr)
+
+grafico <- notifica_meningite |> 
+  group_by(ano) |> 
+  summarise(total_casos = sum(Casos)) |> 
+  ggplot(aes(x = factor(ano), y = total_casos)) +
+  geom_bar_interactive(
+    stat = "identity", 
+    aes(
+      tooltip = paste("Ano:", ano, "<br>Total de Casos:", total_casos), # Tooltip interativo
+      data_id = ano
+    ),
+    fill = "steelblue"
+  ) +
+  geom_text_interactive(
+    aes(
+      label = total_casos, # Texto dos rótulos
+      tooltip = paste("Casos:", total_casos), # Tooltip adicional nos rótulos
+      data_id = ano
+    ),
+    vjust = -0.5, # Ajusta a posição dos rótulos acima das barras
+    size = 3 # Tamanho da fonte dos rótulos
+  ) +
+  labs(
+    title = "Total de Casos por Ano",
+    x = "Ano",
+    y = "Número de Casos"
+  ) +
+  theme_light(base_size = 8)
+
+
+girafe(ggobj = grafico)
+
+```
+
+
+### Incidencia
+```{r}
+#| echo: false
+#| warning: false
+
+dygraph(incidencia_xts, main = "Casos de Meningite") |> 
+  dyAxis("y", label = "Número de Casos") |> 
+  dyAxis("x", label = "Data") |> 
+  dySeries("Casos_Confirmados", label = "Casos Confirmados", color = "red") |> 
+  dySeries("incidencia", label = "Incidencia", color = "green") |> 
+  dyOptions(stackedGraph = TRUE) # Não empilhar as séries
+
+```
+
+:::
+
+
+
+## Tipos de Meningite
+
+
+
+
+```{=html}
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+```
+::: blue
+
+O gráfico apresenta o número de casos registrados por tipo de meningite em Belém-PA, evidenciando que a meningite asséptica foi a mais prevalente, com 479 casos, seguida por meningite causada por outras bactérias, totalizando 335 casos. Esses dois tipos somam a maior parte das ocorrências, indicando a relevância de investigar suas causas e melhorar estratégias de prevenção e controle. Meningite por outras etiologias (127 casos) e meningite tuberculosa (121 casos) também apresentam números expressivos, sugerindo atenção para casos de origem infecciosa. Já os tipos menos frequentes, como meningococcemia (5 casos) e meningite por Hemófilo (8 casos), apesar de baixos em números absolutos, merecem monitoramento devido ao seu impacto potencial na saúde pública. A distribuição reflete a diversidade das causas da doença na região e destaca a importância de políticas direcionadas para diagnóstico precoce e manejo efetivo.
+
+
+:::
+
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+
+grafico_interativo <- Dados_Meningite |> 
+  group_by(TIPO_MENINGITE) |> 
+  summarise(casos = n()) |> 
+  tidyr::drop_na() |> 
+  mutate(TIPO_MENINGITE = fct_reorder(TIPO_MENINGITE, casos)) |> # Ordenação
+  ggplot(aes(
+    x = TIPO_MENINGITE, 
+    y = casos, 
+    fill = casos, 
+    tooltip = paste("Tipo:", TIPO_MENINGITE, "<br>Casos:", casos), # Tooltip
+    data_id = TIPO_MENINGITE # Identificação única
+  )) +
+  geom_col_interactive(show.legend = FALSE) + # Barras interativas
+  geom_text_interactive(
+    aes(
+      label = casos, # Adiciona os rótulos
+      tooltip = paste("Casos:", casos), # Tooltip adicional nos rótulos
+      data_id = TIPO_MENINGITE
+    ),
+    hjust = -0.2, # Ajusta a posição dos rótulos fora das barras
+    size = 3 # Tamanho da fonte dos rótulos
+  ) +
+  coord_flip() +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) + # Aumenta espaço no eixo X (flip)
+  labs(
+    title = "Número de Casos por Tipo de Meningite",
+    x = "Tipo de Meningite",
+    y = "Número de Casos"
+  ) +
+  theme_light(base_size = 8) + # Tema mais limpo
+  scale_fill_gradient(low = "lightblue", high = "darkblue") # Escala de cores
+
+
+# Exibindo o gráfico interativo com girafe
+girafe(ggobj = grafico_interativo)
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

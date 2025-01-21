@@ -2,7 +2,7 @@
 
 # Carregando pacotes ------------------------------------------------------
 
-pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph)
+pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph, forcats)
 
 
 # Carregando dados --------------------------------------------------------
@@ -90,7 +90,9 @@ Dados_Meningite <- Dados_Meningite |>
     !is.na(DT_INVEST) & !is.na(DT_ENCERRA) ~ "Não",
     is.na(DT_INVEST) ~ "Não",                             
     TRUE ~ NA_character_                
-  )
+  ),
+  ano = year(DT_NOTIFIC),
+  mes = month(DT_NOTIFIC)
   )
 
 
@@ -101,10 +103,39 @@ Dados_Meningite <- Dados_Meningite |>
 
 
 notifica_meningite <- Dados_Meningite |> 
-  mutate(ano = year(DT_NOTIFIC),
-         mes = month(DT_NOTIFIC)) |> 
   group_by(ano, mes) |> 
-  summarise(Casos = n())
+  summarise(Casos = n(), 
+            Casos_Confirmados = sum(CASO_CONFIRMADO == "Confirmado", na.rm = TRUE),
+            .groups = "drop") |> 
+  mutate(data = make_date(ano, mes, 1),
+         incidencia = (Casos_Confirmados/1350000)*100000)
+
+
+# semana epidemiologica
+
+casos_semana_epi <- Dados_Meningite |> 
+  group_by(ano, semana_epi) |> 
+  summarise(Casos = n(), 
+            Casos_Confirmados = sum(CASO_CONFIRMADO == "Confirmado", na.rm = TRUE),
+            .groups = "drop") |> 
+  mutate(incidencia = (Casos_Confirmados/1350000)*100000,
+         data = as.Date("2020-01-01") + (semana_epi - 1) * 7)
+
+
+
+
+
+
+casos_meningite_xts <- xts(
+  notifica_meningite[, c("Casos", "Casos_Confirmados")], # Selecionar colunas de interesse
+  order.by = notifica_meningite$data
+)
+
+
+incidencia_xts <- xts(
+  notifica_meningite[,c("incidencia", "Casos_Confirmados")], # Selecionar colunas de interesse
+  order.by = notifica_meningite$data)
+
 
 
 # Criar uma coluna de data para o eixo X (ano-mês)
@@ -114,26 +145,22 @@ notifica_meningite$data <- as.Date(paste(notifica_meningite$ano,
 
 
 
-grafico <- notifica_meningite |> 
-  group_by(ano) |> 
-  summarise(total_casos = sum(Casos)) |> 
-  ggplot(aes(x = factor(ano), y = total_casos)) +
-  geom_bar_interactive(
-    stat = "identity", 
-    aes(
-      tooltip = paste("Ano:", ano, "<br>Total de Casos:", total_casos), # Tooltip interativo
-      data_id = ano
-    ),
-    fill = "steelblue"
-  ) +
-  labs(
-    title = "Total de Casos por Ano",
-    x = "Ano",
-    y = "Número de Casos"
-  ) +
-  theme_bw()
 
-girafe(ggobj = grafico, width_svg = 8, height_svg = 5)
+
+
+####################################
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
