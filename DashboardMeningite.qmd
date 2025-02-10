@@ -1,6 +1,19 @@
 ---
-title: "Meu Dashboard Bonito"
-format: dashboard
+title: "COVID-19 Belém-PA"
+output: 
+  flexdashboard::flex_dashboard:
+    navbar:
+      - { icon: "fa-twitter", href: "https://twitter.com/CoronavirusBra1?s=20&t=aF-tOgKsLox9VkpEEGeNiA", 
+      align: right}
+      - { icon: "fa-facebook",  
+      href: "https://sesma.belem.pa.gov.br", align: right}
+      - { icon: "fa-instagram", 
+      href: "https://www.instagram.com/sesma.pmb/", align: right}
+    theme: "yeti"
+    orientation: rows
+    vertical_layout: scroll
+    runtime: shiny
+    css: style.css
 ---
 
 ###  {.sidebar}

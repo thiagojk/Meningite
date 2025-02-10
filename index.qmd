@@ -1,7 +1,11 @@
 ---
 title: "Meningite"
+project:
+  type: website
+  output-dir: docs
 format:
   html:
+    self-contained: true
     toc: true
     toc-title: "Índice"
     toc-sections: true
@@ -12,9 +16,7 @@ format:
       gutter-width: 1.5rem
     smooth-scroll: true
     html-math-method: katex
-    theme:
-      light: journal
-      dark: darkly
+    theme: default
 lang: pt
 ---
 

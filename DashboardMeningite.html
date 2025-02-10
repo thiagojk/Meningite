@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Meu Dashboard Bonito</title>
+<title>COVID-19 Belém-PA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -33,14 +67,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="DashboardMeningite_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="DashboardMeningite_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="DashboardMeningite_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="DashboardMeningite_files/libs/quarto-dashboard/quarto-dashboard.js"></script>
-<script src="DashboardMeningite_files/libs/quarto-dashboard/stickythead.js"></script>
-<script src="DashboardMeningite_files/libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
-<script src="DashboardMeningite_files/libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
-<script src="DashboardMeningite_files/libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
-<script src="DashboardMeningite_files/libs/quarto-dashboard/web-components.js" type="module"></script>
-<script src="DashboardMeningite_files/libs/quarto-dashboard/components.js"></script>
-<link href="DashboardMeningite_files/libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script src="DashboardMeningite_files/libs/bootstrap-datepicker-js-1.9.0/js/bootstrap-datepicker.min.js"></script>
 
 <script>(function() {
@@ -99,205 +125,303 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="quarto-dashboard dashboard-fill dashboard-sidebar fullcontent">
+<body class="fullcontent">
 
-<header id="quarto-dashboard-header">
-<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
-  <div class="navbar-container container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>    
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">COVID-19 Belém-PA</h1>
+</div>
 
 
-    <div class="navbar-brand-container">       
 
-      <div class="navbar-title">
-        <div class="navbar-title-text"><a href="#">Meu Dashboard Bonito</a></div>
-        
-        
-      </div>
-    </div>
-<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-meningite" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#meningite" data-scrolling="false" href="#meningite" aria-controls="meningite" aria-selected="true"><span class="nav-link-text">Meningite</span></a></li><li class="nav-item" role="presentation"><a id="tab-section-1" class="nav-link" data-bs-toggle="tab" role="tab" data-bs-target="#section-1" data-scrolling="false" href="#section-1" aria-controls="section-1" aria-selected="false"><span class="nav-link-text"></span></a></li></ul></div></div>
-</nav>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
 </header>
-<div class="page-layout-custom quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages dashboard-sidebar-container">  
 
-<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
-<div class="tab-content bslib-grid html-fill-item html-fill-container" style="display: grid; grid-template-columns: minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div id="meningite" class="dashboard-page tab-pane show active html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-meningite">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 20fr) minmax(3em, 40fr) minmax(3em, 40fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr) minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #71A621;">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
 
-<i class="bi bi-activity"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Casos Totais
-</p>
-<p class="value-box-value">
-4368
-</p>
+<section id="section" class="level3 sidebar">
+<h3 class="sidebar anchored" data-anchor-id="section"></h3>
+<p>Sidebar Content</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dateRangeInput</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">inputId =</span> <span class="st">"ano_range"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"Selecione o Intervalo de Anos"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">start =</span> <span class="fu">as.Date</span>(<span class="st">"2000-01-01"</span>), <span class="co"># Data inicial (ano mínimo)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">end =</span> <span class="fu">as.Date</span>(<span class="st">"2025-12-31"</span>), <span class="co"># Data final (ano máximo)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="fu">as.Date</span>(<span class="st">"1900-01-01"</span>), <span class="co"># Limite inferior</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="fu">as.Date</span>(<span class="st">"2100-12-31"</span>), <span class="co"># Limite superior</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">format =</span> <span class="st">"yyyy"</span>, <span class="co"># Mostra apenas o ano no campo de entrada</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">startview =</span> <span class="st">"decade"</span>, <span class="co"># Exibe a visualização por década</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">language =</span> <span class="st">"pt-BR"</span> <span class="co"># Idioma (opcional)</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="ano_range" class="shiny-date-range-input form-group shiny-input-container">
+<label class="control-label" id="ano_range-label" for="ano_range">Selecione o Intervalo de Anos</label>
+<div class="input-daterange input-group input-group-sm">
+<input class="form-control" type="text" aria-labelledby="ano_range-label" title="Date format: yyyy" data-date-language="pt-BR" data-date-week-start="0" data-date-format="yyyy" data-date-start-view="decade" data-min-date="1900-01-01" data-max-date="2100-12-31" data-initial-date="2000-01-01" data-date-autoclose="true">
+<span class="input-group-addon input-group-prepend input-group-append">
+<span class="input-group-text"> to </span>
+</span>
+<input class="form-control" type="text" aria-labelledby="ano_range-label" title="Date format: yyyy" data-date-language="pt-BR" data-date-week-start="0" data-date-format="yyyy" data-date-start-view="decade" data-min-date="1900-01-01" data-max-date="2100-12-31" data-initial-date="2025-12-31" data-date-autoclose="true">
 </div>
 </div>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-{} showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sliderInput</span>(</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">inputId =</span> <span class="st">"ano_slider"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="st">"Selecione o Intervalo de Anos"</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">min =</span> <span class="dv">1900</span>, <span class="co"># Ano mínimo disponível</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">max =</span> <span class="dv">2100</span>, <span class="co"># Ano máximo disponível</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">value =</span> <span class="fu">c</span>(<span class="dv">2000</span>, <span class="dv">2025</span>), <span class="co"># Intervalo inicial selecionado</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">step =</span> <span class="dv">1</span>, <span class="co"># Incrementos de um ano</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">sep =</span> <span class="st">""</span>, <span class="co"># Remove separadores de milhar</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">animate =</span> <span class="cn">TRUE</span> <span class="co"># Adiciona uma animação ao slider (opcional)</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="ano_slider-label" for="ano_slider">Selecione o Intervalo de Anos</label>
+<input class="js-range-slider" id="ano_slider" data-skin="shiny" data-type="double" data-min="1900" data-max="2100" data-from="2000" data-to="2025" data-step="1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="" data-prettify-enabled="false" data-keyboard="true" data-drag-interval="true" data-data-type="number">
+<div class="slider-animate-container">
+<a href="#" class="slider-animate-button" data-target-id="ano_slider" data-interval="1000" data-loop="FALSE">
+<span class="play">
+<i aria-label="play icon" class="glyphicon glyphicon-play" role="presentation"></i>
+</span>
+<span class="pause">
+<i aria-label="pause icon" class="glyphicon glyphicon-pause" role="presentation"></i>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">checkboxGroupInput</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">inputId =</span> <span class="st">"Ano"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> <span class="st">"Selecione os Anos"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"Todos"</span>, <span class="fu">unique</span>(notifica_meningite<span class="sc">$</span>ano)), <span class="co"># Inclui "Todos" e os anos disponíveis</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">selected =</span> <span class="st">"Todos"</span> <span class="co"># Define "Todos" como selecionado por padrão</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="Ano" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="Ano-label">
+<label class="control-label" id="Ano-label" for="Ano">Selecione os Anos</label>
+<div class="shiny-options-group">
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="Todos" checked="checked">
+<span>Todos</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="2020">
+<span>2020</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="2021">
+<span>2021</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="2022">
+<span>2022</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="2023">
+<span>2023</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="2024">
+<span>2024</span>
+</label>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox" name="Ano" value="2025">
+<span>2025</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="meningite" class="level1">
+<h1>Meningite</h1>
+<section id="row" class="level2" height="20%">
+<h2 height="20%" class="anchored" data-anchor-id="row">Row</h2>
+<div class="cell" content="valuebox" title="Casos Totais" data-icon="activity" color="#71A621">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>notifica_meningite <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(ano) <span class="sc">|&gt;</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">total_casos =</span> <span class="fu">sum</span>(Casos)) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">total =</span> <span class="fu">sum</span>(total_casos)) <span class="sc">|&gt;</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4368</code></pre>
+</div>
+</div>
+<div class="cell" content="valuebox" title="Trimestre Anterior" data-icon="pencil" color="{}">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>notifica_meningite <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(ano) <span class="sc">%&gt;%</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">total_casos =</span> <span class="fu">sum</span>(Casos)) <span class="sc">%&gt;%</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ano <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(total_casos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 22</code></pre>
+</div>
+</div>
+<div class="cell" content="valuebox" title="Casos em 2020" data-icon="activity" color="#71A890">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>notifica_meningite <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(ano) <span class="sc">%&gt;%</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">total_casos =</span> <span class="fu">sum</span>(Casos)) <span class="sc">%&gt;%</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ano <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(total_casos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 830</code></pre>
+</div>
+</div>
+<div class="cell" content="valuebox" title="Recuperados" data-icon="capsule" color="#71A621">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>notifica_meningite <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(ano) <span class="sc">%&gt;%</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">total_casos =</span> <span class="fu">sum</span>(Casos)) <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ano <span class="sc">==</span> <span class="dv">2025</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pull</span>(total_casos)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 22</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| title: "trimestre ano anterior"</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">icon =</span> <span class="st">"trash"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"danger"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="dv">40</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$icon
+[1] "trash"
 
-<i class="bi bi-pencil"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Trimestre Anterior
-</p>
-<p class="value-box-value">
-22
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()" style=" background: #71A890;">
-<div class="card-body html-fill-item html-fill-container">
-<div class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
+$color
+[1] "danger"
 
-<i class="bi bi-activity"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Casos em 2020
-</p>
-<p class="value-box-value">
-830
-</p>
+$value
+[1] 40</code></pre>
 </div>
 </div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-danger showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="trash" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
+<div class="cell" content="valuebox" title="Trimestre Anterior/Brasil">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">icon =</span> <span class="st">"trash"</span>,</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"primary"</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="dv">8736</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$icon
+[1] "trash"
 
-<i class="bi bi-capsule"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Recuperados
-</p>
-<p class="value-box-value">
-40
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="trash" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
+$color
+[1] "primary"
 
-<i class="bi bi-trash"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Trimestre Anterior/Brasil
-</p>
-<p class="value-box-value">
-8736
-</p>
+$value
+[1] 8736</code></pre>
 </div>
 </div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="trash" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
+<div class="cell" content="valuebox" title="Acumulado/Brasil">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">icon =</span> <span class="st">"trash"</span>,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"primary"</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="dv">2021231</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$icon
+[1] "trash"
 
-<i class="bi bi-trash"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Acumulado/Brasil
-</p>
-<p class="value-box-value">
-2021231
-</p>
-</div>
-</div>
-</div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div><div class="card valuebox cell html-fill-item html-fill-container bslib-card bslib-value-box bg-primary showcase-left-center" data-bslib-card-init="" data-require-bs-caller="card()">
-<div class="card-body html-fill-item html-fill-container">
-<div data-icon="trash" class="html-fill-item html-fill-container value-box-grid">
-<div class="value-box-showcase html-fill-item html-fill-container">
+$color
+[1] "primary"
 
-<i class="bi bi-trash"></i></div>
-<div class="value-box-area">
-<p class="value-box-title">
-Trimestre Ano Anterior/Brasil
-</p>
-<p class="value-box-value">
-2021231
-</p>
+$value
+[1] 2021231</code></pre>
 </div>
 </div>
+<div class="cell" content="valuebox" title="Trimestre Ano Anterior/Brasil">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">icon =</span> <span class="st">"trash"</span>,</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">color =</span> <span class="st">"primary"</span>,</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="dv">2021231</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$icon
+[1] "trash"
+
+$color
+[1] "primary"
+
+$value
+[1] 2021231</code></pre>
 </div>
-<script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="card html-fill-item html-fill-container bslib-card" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="panel-tabset html-fill-item html-fill-container">
+</section>
+<section id="row-1" class="level2" height="40%">
+<h2 height="40%" class="anchored" data-anchor-id="row-1">Row</h2>
+<section id="vbp" class="level3">
+<h3 class="anchored" data-anchor-id="vbp">VBP</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Grafico 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Grafico 2</a></li></ul>
-<div class="tab-content html-fill-item html-fill-container">
-<div id="tabset-1-1" class="tab-pane active html-fill-item html-fill-container" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
-<div class="dygraphs html-widget html-fill-item html-fill-container" id="htmlwidget-9dcb1bbfee404192441b" style="width:100%;height:406px;"></div>
-<script type="application/json" data-for="htmlwidget-9dcb1bbfee404192441b">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"Casos de Meningite","labels":["month","V1"],"legend":"auto","retainDateWindow":false,"ylabel":"Valores","xlabel":"Data","stackedGraph":true,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2020-01-01T00:00:00.000Z","2020-02-01T00:00:00.000Z","2020-03-01T00:00:00.000Z","2020-04-01T00:00:00.000Z","2020-05-01T00:00:00.000Z","2020-06-01T00:00:00.000Z","2020-07-01T00:00:00.000Z","2020-08-01T00:00:00.000Z","2020-09-01T00:00:00.000Z","2020-10-01T00:00:00.000Z","2020-11-01T00:00:00.000Z","2020-12-01T00:00:00.000Z","2021-01-01T00:00:00.000Z","2021-02-01T00:00:00.000Z","2021-03-01T00:00:00.000Z","2021-04-01T00:00:00.000Z","2021-05-01T00:00:00.000Z","2021-06-01T00:00:00.000Z","2021-07-01T00:00:00.000Z","2021-08-01T00:00:00.000Z","2021-09-01T00:00:00.000Z","2021-10-01T00:00:00.000Z","2021-11-01T00:00:00.000Z","2021-12-01T00:00:00.000Z","2022-01-01T00:00:00.000Z","2022-02-01T00:00:00.000Z","2022-03-01T00:00:00.000Z","2022-04-01T00:00:00.000Z","2022-05-01T00:00:00.000Z","2022-06-01T00:00:00.000Z","2022-07-01T00:00:00.000Z","2022-08-01T00:00:00.000Z","2022-09-01T00:00:00.000Z","2022-10-01T00:00:00.000Z","2022-11-01T00:00:00.000Z","2022-12-01T00:00:00.000Z","2023-01-01T00:00:00.000Z","2023-02-01T00:00:00.000Z","2023-03-01T00:00:00.000Z","2023-04-01T00:00:00.000Z","2023-05-01T00:00:00.000Z","2023-06-01T00:00:00.000Z","2023-07-01T00:00:00.000Z","2023-08-01T00:00:00.000Z","2023-09-01T00:00:00.000Z","2023-10-01T00:00:00.000Z","2023-11-01T00:00:00.000Z","2023-12-01T00:00:00.000Z","2024-01-01T00:00:00.000Z","2024-02-01T00:00:00.000Z","2024-03-01T00:00:00.000Z","2024-04-01T00:00:00.000Z","2024-05-01T00:00:00.000Z","2024-06-01T00:00:00.000Z","2024-07-01T00:00:00.000Z","2024-08-01T00:00:00.000Z","2024-09-01T00:00:00.000Z","2024-10-01T00:00:00.000Z","2024-11-01T00:00:00.000Z","2024-12-01T00:00:00.000Z","2025-01-01T00:00:00.000Z"],[93,98,100,55,49,43,74,44,76,63,70,65,51,60,45,49,52,59,70,62,55,53,52,65,71,43,58,76,76,82,73,72,62,70,74,72,77,58,67,86,89,80,87,96,73,70,65,59,80,57,80,101,91,95,104,90,95,117,103,94,22]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dygraph</span>(<span class="fu">xts</span>(notifica_meningite<span class="sc">$</span>Casos, <span class="at">order.by =</span> notifica_meningite<span class="sc">$</span>data), </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Casos de Meningite"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dyAxis</span>(<span class="st">"y"</span>, <span class="at">label =</span> <span class="st">"Valores"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dyAxis</span>(<span class="st">"x"</span>, <span class="at">label =</span> <span class="st">"Data"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dyOptions</span>(<span class="at">stackedGraph =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="dygraphs html-widget html-fill-item" id="htmlwidget-a95383ba2c8f318ad91e" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-a95383ba2c8f318ad91e">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"Casos de Meningite","labels":["month","V1"],"legend":"auto","retainDateWindow":false,"ylabel":"Valores","xlabel":"Data","stackedGraph":true,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2020-01-01T00:00:00.000Z","2020-02-01T00:00:00.000Z","2020-03-01T00:00:00.000Z","2020-04-01T00:00:00.000Z","2020-05-01T00:00:00.000Z","2020-06-01T00:00:00.000Z","2020-07-01T00:00:00.000Z","2020-08-01T00:00:00.000Z","2020-09-01T00:00:00.000Z","2020-10-01T00:00:00.000Z","2020-11-01T00:00:00.000Z","2020-12-01T00:00:00.000Z","2021-01-01T00:00:00.000Z","2021-02-01T00:00:00.000Z","2021-03-01T00:00:00.000Z","2021-04-01T00:00:00.000Z","2021-05-01T00:00:00.000Z","2021-06-01T00:00:00.000Z","2021-07-01T00:00:00.000Z","2021-08-01T00:00:00.000Z","2021-09-01T00:00:00.000Z","2021-10-01T00:00:00.000Z","2021-11-01T00:00:00.000Z","2021-12-01T00:00:00.000Z","2022-01-01T00:00:00.000Z","2022-02-01T00:00:00.000Z","2022-03-01T00:00:00.000Z","2022-04-01T00:00:00.000Z","2022-05-01T00:00:00.000Z","2022-06-01T00:00:00.000Z","2022-07-01T00:00:00.000Z","2022-08-01T00:00:00.000Z","2022-09-01T00:00:00.000Z","2022-10-01T00:00:00.000Z","2022-11-01T00:00:00.000Z","2022-12-01T00:00:00.000Z","2023-01-01T00:00:00.000Z","2023-02-01T00:00:00.000Z","2023-03-01T00:00:00.000Z","2023-04-01T00:00:00.000Z","2023-05-01T00:00:00.000Z","2023-06-01T00:00:00.000Z","2023-07-01T00:00:00.000Z","2023-08-01T00:00:00.000Z","2023-09-01T00:00:00.000Z","2023-10-01T00:00:00.000Z","2023-11-01T00:00:00.000Z","2023-12-01T00:00:00.000Z","2024-01-01T00:00:00.000Z","2024-02-01T00:00:00.000Z","2024-03-01T00:00:00.000Z","2024-04-01T00:00:00.000Z","2024-05-01T00:00:00.000Z","2024-06-01T00:00:00.000Z","2024-07-01T00:00:00.000Z","2024-08-01T00:00:00.000Z","2024-09-01T00:00:00.000Z","2024-10-01T00:00:00.000Z","2024-11-01T00:00:00.000Z","2024-12-01T00:00:00.000Z","2025-01-01T00:00:00.000Z"],[93,98,100,55,49,43,74,44,76,63,70,65,51,60,45,49,52,59,70,62,55,53,52,65,71,43,58,76,76,82,73,72,62,70,74,72,77,58,67,86,89,80,87,96,73,70,65,59,80,57,80,101,91,95,104,90,95,117,103,94,22]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-<div id="tabset-1-2" class="tab-pane html-fill-item html-fill-container" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
-<div class="girafe html-widget html-fill-item html-fill-container" id="htmlwidget-99fcc102ba7730cbc55a" style="width:100%;height:406px;"></div>
-<script type="application/json" data-for="htmlwidget-99fcc102ba7730cbc55a">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc' viewBox='0 0 576 360'>\n <defs id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_defs'>\n  <clipPath id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_c1'>\n   <rect x='0' y='0' width='576' height='360'/>\n  <\/clipPath>\n  <clipPath id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_c2'>\n   <rect x='38.03' y='23.18' width='532.49' height='305.33'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_c1)'>\n   <rect x='0' y='0' width='576' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='576' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_c2)'>\n   <rect x='38.03' y='23.18' width='532.49' height='305.33' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='38.03,277.01 570.52,277.01' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,201.79 570.52,201.79' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,126.57 570.52,126.57' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,51.35 570.52,51.35' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,314.63 570.52,314.63' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,239.40 570.52,239.40' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,164.18 570.52,164.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,88.96 570.52,88.96' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='89.56,328.50 89.56,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='175.45,328.50 175.45,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='261.33,328.50 261.33,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='347.22,328.50 347.22,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='433.10,328.50 433.10,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.99,328.50 518.99,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_e1' x='50.92' y='106.51' width='77.3' height='208.11' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2020 &amp;lt;br&amp;gt;Total de Casos: 830' data-id='2020'/>\n   <rect id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_e2' x='136.8' y='145.88' width='77.3' height='168.75' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2021 &amp;lt;br&amp;gt;Total de Casos: 673' data-id='2021'/>\n   <rect id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_e3' x='222.69' y='106.76' width='77.3' height='207.86' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2022 &amp;lt;br&amp;gt;Total de Casos: 829' data-id='2022'/>\n   <rect id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_e4' x='308.57' y='87.2' width='77.3' height='227.42' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2023 &amp;lt;br&amp;gt;Total de Casos: 907' data-id='2023'/>\n   <rect id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_e5' x='394.46' y='37.06' width='77.3' height='277.57' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2024 &amp;lt;br&amp;gt;Total de Casos: 1107' data-id='2024'/>\n   <rect id='svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_e6' x='480.34' y='309.11' width='77.3' height='5.52' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2025 &amp;lt;br&amp;gt;Total de Casos: 22' data-id='2025'/>\n   <rect x='38.03' y='23.18' width='532.49' height='305.33' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc_c1)'>\n   <text x='28.21' y='317.78' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='18.41' y='242.55' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>300<\/text>\n   <text x='18.41' y='167.33' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>600<\/text>\n   <text x='18.41' y='92.11' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>900<\/text>\n   <polyline points='35.29,314.63 38.03,314.63' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,239.40 38.03,239.40' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,164.18 38.03,164.18' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,88.96 38.03,88.96' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='89.56,331.24 89.56,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='175.45,331.24 175.45,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='261.33,331.24 261.33,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='347.22,331.24 347.22,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='433.10,331.24 433.10,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.99,331.24 518.99,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='79.77' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2020<\/text>\n   <text x='165.66' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2021<\/text>\n   <text x='251.54' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2022<\/text>\n   <text x='337.43' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2023<\/text>\n   <text x='423.31' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2024<\/text>\n   <text x='509.2' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2025<\/text>\n   <text x='294.49' y='352.2' font-size='8.25pt' font-family='Arial'>Ano<\/text>\n   <text transform='translate(13.36,220.18) rotate(-90.00)' font-size='8.25pt' font-family='Arial'>Número de Casos<\/text>\n   <text x='38.03' y='14.93' font-size='9.9pt' font-family='Arial'>Total de Casos por Ano<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_72944779_4c69_4d85_8ce3_ed7cb5dbf4dc","ratio":1.6,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"fixed":false,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renderizar o gráfico com ggiraph</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">girafe</span>(<span class="at">ggobj =</span> grafico, <span class="at">width_svg =</span> <span class="dv">8</span>, <span class="at">height_svg =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item" id="htmlwidget-becbdd1f963af336f1a3" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-becbdd1f963af336f1a3">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_491857d1_f5c3_43e3_bda4_cc414a611621' viewBox='0 0 576 360'>\n <defs id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_defs'>\n  <clipPath id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_c1'>\n   <rect x='0' y='0' width='576' height='360'/>\n  <\/clipPath>\n  <clipPath id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_c2'>\n   <rect x='38.03' y='23.18' width='532.49' height='305.33'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_491857d1_f5c3_43e3_bda4_cc414a611621_c1)'>\n   <rect x='0' y='0' width='576' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='576' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_491857d1_f5c3_43e3_bda4_cc414a611621_c2)'>\n   <rect x='38.03' y='23.18' width='532.49' height='305.33' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='38.03,277.01 570.52,277.01' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,201.79 570.52,201.79' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,126.57 570.52,126.57' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,51.35 570.52,51.35' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,314.63 570.52,314.63' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,239.40 570.52,239.40' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,164.18 570.52,164.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='38.03,88.96 570.52,88.96' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='89.56,328.50 89.56,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='175.45,328.50 175.45,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='261.33,328.50 261.33,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='347.22,328.50 347.22,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='433.10,328.50 433.10,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.99,328.50 518.99,23.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_e1' x='50.92' y='106.51' width='77.3' height='208.11' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2020 &amp;lt;br&amp;gt;Total de Casos: 830' data-id='2020'/>\n   <rect id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_e2' x='136.8' y='145.88' width='77.3' height='168.75' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2021 &amp;lt;br&amp;gt;Total de Casos: 673' data-id='2021'/>\n   <rect id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_e3' x='222.69' y='106.76' width='77.3' height='207.86' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2022 &amp;lt;br&amp;gt;Total de Casos: 829' data-id='2022'/>\n   <rect id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_e4' x='308.57' y='87.2' width='77.3' height='227.42' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2023 &amp;lt;br&amp;gt;Total de Casos: 907' data-id='2023'/>\n   <rect id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_e5' x='394.46' y='37.06' width='77.3' height='277.57' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2024 &amp;lt;br&amp;gt;Total de Casos: 1107' data-id='2024'/>\n   <rect id='svg_491857d1_f5c3_43e3_bda4_cc414a611621_e6' x='480.34' y='309.11' width='77.3' height='5.52' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2025 &amp;lt;br&amp;gt;Total de Casos: 22' data-id='2025'/>\n   <rect x='38.03' y='23.18' width='532.49' height='305.33' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_491857d1_f5c3_43e3_bda4_cc414a611621_c1)'>\n   <text x='28.21' y='317.78' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='18.41' y='242.55' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>300<\/text>\n   <text x='18.41' y='167.33' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>600<\/text>\n   <text x='18.41' y='92.11' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>900<\/text>\n   <polyline points='35.29,314.63 38.03,314.63' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,239.40 38.03,239.40' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,164.18 38.03,164.18' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.29,88.96 38.03,88.96' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='89.56,331.24 89.56,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='175.45,331.24 175.45,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='261.33,331.24 261.33,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='347.22,331.24 347.22,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='433.10,331.24 433.10,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.99,331.24 518.99,328.50' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='79.77' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2020<\/text>\n   <text x='165.66' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2021<\/text>\n   <text x='251.54' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2022<\/text>\n   <text x='337.43' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2023<\/text>\n   <text x='423.31' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2024<\/text>\n   <text x='509.2' y='339.74' font-size='6.6pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2025<\/text>\n   <text x='294.49' y='352.2' font-size='8.25pt' font-family='Arial'>Ano<\/text>\n   <text transform='translate(13.36,220.18) rotate(-90.00)' font-size='8.25pt' font-family='Arial'>Número de Casos<\/text>\n   <text x='38.03' y='14.93' font-size='9.9pt' font-family='Arial'>Total de Casos por Ano<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_491857d1_f5c3_43e3_bda4_cc414a611621","ratio":1.6,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"fixed":false,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </div>
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
 </div>
-</div>
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
-grid-auto-rows: minmax(0, 1fr);">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
-<div class="card cell html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
-<div class="cell-output-display html-fill-item html-fill-container">
+</section>
+</section>
+<section id="row-2" class="level2" height="40%">
+<h2 height="40%" class="anchored" data-anchor-id="row-2">Row</h2>
+<section id="plot-1" class="level3">
+<h3 class="anchored" data-anchor-id="plot-1">Plot 1</h3>
+</section>
+<section id="plot2" class="level3">
+<h3 class="anchored" data-anchor-id="plot2">Plot2</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(iris, <span class="at">align =</span> <span class="st">"c"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -1363,114 +1487,15 @@ grid-auto-rows: minmax(0, 1fr);">
 </table>
 </div>
 </div>
-<bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
-    <template>Expand</template>
-    <span class="bslib-full-screen-enter badge rounded-pill">
-        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
-    </span>
-</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
-</div>
-</div>
-</div>
-</div><div id="section-1" class="dashboard-page tab-pane grid-skip html-fill-item html-fill-container" data-orientation="rows" aria-labelledby="tab-section-1">
-<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: ; grid-auto-columns: minmax(0, 1fr);">
-<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+</section>
+</section>
+</section>
+<section id="section-1" class="level1">
+<h1></h1>
+</section>
 
-</div>
-</div>
-</div>
-</div>
-</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-container html-fill-item">
-<p>Sidebar Content</p>
-<div class="cell-output-display">
-<div id="ano_range" class="shiny-date-range-input form-group shiny-input-container">
-<label class="control-label" id="ano_range-label" for="ano_range">Selecione o Intervalo de Anos</label>
-<div class="input-daterange input-group input-group-sm">
-<input class="form-control" type="text" aria-labelledby="ano_range-label" title="Date format: yyyy" data-date-language="pt-BR" data-date-week-start="0" data-date-format="yyyy" data-date-start-view="decade" data-min-date="1900-01-01" data-max-date="2100-12-31" data-initial-date="2000-01-01" data-date-autoclose="true">
-<span class="input-group-addon input-group-prepend input-group-append">
-<span class="input-group-text"> to </span>
-</span>
-<input class="form-control" type="text" aria-labelledby="ano_range-label" title="Date format: yyyy" data-date-language="pt-BR" data-date-week-start="0" data-date-format="yyyy" data-date-start-view="decade" data-min-date="1900-01-01" data-max-date="2100-12-31" data-initial-date="2025-12-31" data-date-autoclose="true">
-</div>
-</div>
-</div>
-<div class="cell-output-display">
-<div class="form-group shiny-input-container no-baseline">
-<label class="control-label" id="ano_slider-label" for="ano_slider">Selecione o Intervalo de Anos</label>
-<input class="js-range-slider" id="ano_slider" data-skin="shiny" data-type="double" data-min="1900" data-max="2100" data-from="2000" data-to="2025" data-step="1" data-grid="true" data-grid-num="10" data-grid-snap="false" data-prettify-separator="" data-prettify-enabled="false" data-keyboard="true" data-drag-interval="true" data-data-type="number">
-<div class="slider-animate-container">
-<a href="#" class="slider-animate-button" data-target-id="ano_slider" data-interval="1000" data-loop="FALSE">
-<span class="play">
-<i aria-label="play icon" class="glyphicon glyphicon-play" role="presentation"></i>
-</span>
-<span class="pause">
-<i aria-label="pause icon" class="glyphicon glyphicon-pause" role="presentation"></i>
-</span>
-</a>
-</div>
-</div>
-</div>
-<div class="cell-output-display">
-<div id="Ano" class="form-group shiny-input-checkboxgroup shiny-input-container" role="group" aria-labelledby="Ano-label">
-<label class="control-label" id="Ano-label" for="Ano">Selecione os Anos</label>
-<div class="shiny-options-group">
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="Todos" checked="checked">
-<span>Todos</span>
-</label>
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="2020">
-<span>2020</span>
-</label>
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="2021">
-<span>2021</span>
-</label>
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="2022">
-<span>2022</span>
-</label>
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="2023">
-<span>2023</span>
-</label>
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="2024">
-<span>2024</span>
-</label>
-</div>
-<div class="checkbox">
-<label>
-<input type="checkbox" name="Ano" value="2025">
-<span>2025</span>
-</label>
-</div>
-</div>
-</div>
-</div>
-</div></aside>
-<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
-    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
-      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-    </svg>
-</button>
-<script data-bslib-sidebar-init="">
-bslib.Sidebar.initCollapsibleAll()
-</script>
-</div>
-
-
+</main>
+<!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1880,16 +1905,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /container fluid -->
+</div> <!-- /content -->
 
-<script type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (_event) {
-  if (window.bslib.Card) {
-    window.bslib.Card.initializeAllCards();
-  }
-}); 
-</script>
-  
 
 
 
