@@ -158,7 +158,7 @@ dygraph(incidencia_xts, main = "Casos de Meningite") |>
 ```{r}
 #| echo: false
 #| warning: false
-
+|> 
 Dados_Meningite |> 
   group_by(ano, mes) |> 
   summarise(Casos = n(), 
@@ -171,7 +171,6 @@ Dados_Meningite |>
   kable_styling()
 
 ```
-
 
 :::
 
