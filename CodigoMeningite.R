@@ -2,7 +2,7 @@
 
 # Carregando pacotes ------------------------------------------------------
 
-pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph, forcats)
+pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph, forcats, patchwork, kableExtra)
 
 
 # Carregando dados --------------------------------------------------------
@@ -149,16 +149,6 @@ notifica_meningite$data <- as.Date(paste(notifica_meningite$ano,
 
 
 ####################################
-
-
-
-
-
-
-
-
-
-
 
 
 
