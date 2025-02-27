@@ -1,2 +1,0 @@
-# Meningite
-Dashboard de Meningite
