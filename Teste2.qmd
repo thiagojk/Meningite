@@ -1,0 +1,63 @@
+---
+title: "Relatório de Meningite"
+format:
+  html:
+    toc: true
+    toc-title: "Índice"
+    number-sections: true
+---
+
+# Relatório Meningite Belém-PA
+
+A meningite é uma inflamação das meninges, as membranas que envolvem o cérebro e a medula espinhal, causada por diferentes agentes infecciosos, como bactérias, vírus e fungos. Os sintomas mais comuns incluem febre alta, dor de cabeça intensa, rigidez no pescoço e, em casos graves, confusão mental ou convulsões. A meningite bacteriana é uma emergência médica devido ao alto risco de complicações graves, enquanto a meningite viral geralmente é mais branda. O diagnóstico precoce, realizado por meio da análise do líquido cefalorraquidiano (LCR), e o tratamento adequado são cruciais para reduzir a morbimortalidade.
+
+Em Belém, no Pará, a meningite é um desafio significativo de saúde pública, especialmente devido às condições socioeconômicas e climáticas que favorecem a disseminação de doenças infecciosas. A alta densidade populacional em áreas com saneamento básico precário e o clima quente e úmido contribuem para a propagação da doença. A vacinação contra agentes como meningococo e pneumococo tem sido essencial para a prevenção, mas o sistema de saúde ainda enfrenta desafios em relação à vigilância epidemiológica e ao acesso a tratamentos. Este relatório busca abordar aspectos epidemiológicos e estratégias de controle da meningite no contexto local.
+
+
+
+
+
+
+
+## Casos Mensais
+<div style="text-align: justify">
+A meningite é uma inflamação das meninges, as membranas que envolvem o cérebro e a medula espinhal, causada por diferentes agentes infecciosos, como bactérias, vírus e fungos. Os sintomas mais comuns incluem febre alta, dor de cabeça intensa, rigidez no pescoço e, em casos graves, confusão mental ou convulsões. A meningite bacteriana é uma emergência médica devido ao alto risco de complicações graves, enquanto a meningite viral geralmente é mais branda. O diagnóstico precoce, realizado por meio da análise do líquido cefalorraquidiano (LCR), e o tratamento adequado são cruciais para reduzir a morbimortalidade.
+
+Em Belém, no Pará, a meningite é um desafio significativo de saúde pública, especialmente devido às condições socioeconômicas e climáticas que favorecem a disseminação de doenças infecciosas. A alta densidade populacional em áreas com saneamento básico precário e o clima quente e úmido contribuem para a propagação da doença. A vacinação contra agentes como meningococo e pneumococo tem sido essencial para a prevenção, mas o sistema de saúde ainda enfrenta desafios em relação à vigilância epidemiológica e ao acesso a tratamentos. Este relatório busca abordar aspectos epidemiológicos e estratégias de controle da meningite no contexto local.
+
+
+
+
+
+
+## Contextualização
+
+## Objetivos
+
+# Metodologia
+
+## Fonte de Dados
+
+## Processamento dos Dados
+
+# Resultados
+
+## Série Histórica
+
+### Casos Mensais
+
+### Casos Anuais
+
+### Incidência
+
+## Informações dos Pacientes
+
+### Distribuição por Sexo
+
+### Distribuição por Faixa Etária
+
+# Conclusão
+
+## Principais Achados
+
+## Recomendações Finais

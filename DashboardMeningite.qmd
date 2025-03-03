@@ -1,0 +1,222 @@
+---
+title: "Meu Dashboard Bonito"
+format: dashboard
+---
+
+###  {.sidebar}
+
+Sidebar Content
+
+
+
+```{r, include=FALSE}
+pacman::p_load(ggplot2, readxl, dygraphs, xts,
+               htmlwidgets, flexdashboard, ggiraph, shiny, lplyr)
+source("CodigoMeningite.R")
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+```{r}
+dateRangeInput(
+    inputId = "ano_range",
+    label = "Selecione o Intervalo de Anos",
+    start = as.Date("2000-01-01"), # Data inicial (ano mínimo)
+    end = as.Date("2025-12-31"), # Data final (ano máximo)
+    min = as.Date("1900-01-01"), # Limite inferior
+    max = as.Date("2100-12-31"), # Limite superior
+    format = "yyyy", # Mostra apenas o ano no campo de entrada
+    startview = "decade", # Exibe a visualização por década
+    language = "pt-BR" # Idioma (opcional)
+  )
+
+```
+
+
+
+
+
+
+```{r}
+
+sliderInput(
+    inputId = "ano_slider",
+    label = "Selecione o Intervalo de Anos",
+    min = 1900, # Ano mínimo disponível
+    max = 2100, # Ano máximo disponível
+    value = c(2000, 2025), # Intervalo inicial selecionado
+    step = 1, # Incrementos de um ano
+    sep = "", # Remove separadores de milhar
+    animate = TRUE # Adiciona uma animação ao slider (opcional)
+  )
+
+```
+
+```{r}
+
+
+checkboxGroupInput(
+  inputId = "Ano",
+  label = "Selecione os Anos",
+  choices = c("Todos", unique(notifica_meningite$ano)), # Inclui "Todos" e os anos disponíveis
+  selected = "Todos" # Define "Todos" como selecionado por padrão
+)
+
+```
+
+
+
+
+
+
+
+
+
+# Meningite
+
+
+## Row {height="20%"}
+```{r}
+#| content: valuebox
+#| title: "Casos Totais"
+#| icon: activity
+#| color: "#71A621"
+
+notifica_meningite |> 
+    group_by(ano) |> 
+    summarise(total_casos = sum(Casos)) |>
+    summarise(total = sum(total_casos)) |> 
+    pull(total)
+
+```
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Anterior"
+#| icon: pencil
+#| color: #22396a
+
+notifica_meningite %>%
+    group_by(ano) %>%
+    summarise(total_casos = sum(Casos)) %>%
+    filter(ano == 2025) %>%
+    pull(total_casos)
+
+```
+
+
+```{r}
+#| content: valuebox
+#| title: "Casos em 2020"
+#| icon: activity
+#| color: "#71A890"
+
+notifica_meningite %>%
+    group_by(ano) %>%
+    summarise(total_casos = sum(Casos)) %>%
+    filter(ano == 2020) %>%
+    pull(total_casos)
+```
+
+
+```{r}
+#| content: valuebox
+#| title: "Recuperados"
+#| icon: capsule
+#| color: "#71A621"
+
+notifica_meningite %>%
+    group_by(ano) %>%
+    summarise(total_casos = sum(Casos)) %>%
+    filter(ano == 2025) %>%
+    pull(total_casos)
+
+#| title: "trimestre ano anterior"
+list(
+  icon = "trash",
+  color = "danger",
+  value = 40
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Anterior/Brasil"
+list(
+  icon = "trash",
+  color = "primary",
+  value = 8736
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Acumulado/Brasil"
+list(
+  icon = "trash",
+  color = "primary",
+  value = 2021231
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Ano Anterior/Brasil"
+list(
+  icon = "trash",
+  color = "primary",
+  value = 2021231
+)
+```
+
+## Row {height="40%"}
+
+### VBP
+
+::: panel-tabset
+## Grafico 1
+
+```{r}
+
+
+dygraph(xts(notifica_meningite$Casos, order.by = notifica_meningite$data), 
+        main = "Casos de Meningite") |> 
+  dyAxis("y", label = "Valores") |> 
+  dyAxis("x", label = "Data") |> 
+  dyOptions(stackedGraph = TRUE)
+
+
+
+```
+
+
+
+## Grafico 2
+
+```{r}
+# Renderizar o gráfico com ggiraph
+
+
+
+```
+
+
+
+
+:::
+
+## Row {height="40%"}
+
+### Plot 1
+
+```{r}
+
+
+```
+
+### Plot2
+
+```{r}
+knitr::kable(iris, align = "c")
+```
+
+# 

@@ -1,0 +1,178 @@
+---
+title: "Meu Dashboard Bonito"
+format: dashboard
+---
+
+###  {.sidebar}
+
+Sidebar Content
+
+```{r, include=FALSE}
+pacman::p_load(ggplot2, readxl, dygraphs, xts,
+               htmlwidgets, flexdashboard, ggiraph, shiny)
+
+source("CodigoMeningite.R")
+Sys.setlocale("LC_TIME", "pt_BR.UTF-8")
+```
+
+```{r}
+
+checkboxGroupInput(
+  inputId = "Ano",
+  label = "Selecione os Anos",
+  choices = c("Todos", unique(notifica_meningite$ano)), # Inclui "Todos" e os anos disponíveis
+  selected = "Todos" # Define "Todos" como selecionado por padrão
+)
+
+
+
+```
+
+
+
+
+# Meningite
+
+## Row {height="20%"}
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Anterior"
+#| icon: pencil
+#| color: #22396a
+list(
+  value = 20
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Acumulado"
+list(
+  icon = "chat",
+  color = "#22396a",
+  value = 50
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "trimestre ano anterior"
+list(
+  icon = "trash",
+  color = "danger",
+  value = 40
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Anterior/Brasil"
+list(
+  icon = "trash",
+  color = "primary",
+  value = 8736
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Acumulado/Brasil"
+list(
+  icon = "trash",
+  color = "primary",
+  value = 2021231
+)
+```
+
+```{r}
+#| content: valuebox
+#| title: "Trimestre Ano Anterior/Brasil"
+list(
+  icon = "trash",
+  color = "primary",
+  value = 2021231
+)
+```
+
+## Row {height="40%"}
+
+### VBP
+
+::: panel-tabset
+## Grafico 1
+
+```{r}
+
+
+dygraph(xts(notifica_meningite$Casos, order.by = notifica_meningite$data), 
+        main = "Casos de Meningite") |> 
+  dyAxis("y", label = "Valores") |> 
+  dyAxis("x", label = "Data") |> 
+  dyOptions(stackedGraph = TRUE)
+
+
+
+```
+
+
+
+## Grafico 2
+
+```{r}
+# Renderizar o gráfico com ggiraph
+
+```
+
+
+
+
+:::
+
+## Row {height="40%"}
+
+### Plot 1
+
+```{r}
+
+dados_filtrados <- reactive({
+    if ("Todos" %in% input$Ano) {
+      notifica_meningite # Retorna todos os dados
+    } else {
+      notifica_meningite[notifica_meningite$ano %in% input$Ano, ] # Filtra pelos anos selecionados
+    }
+  })
+
+
+renderggiraph({
+      grafico <- dados_filtrados() |> 
+      group_by(ano) |> 
+      summarise(total_casos = sum(Casos)) |> 
+      ggplot(aes(x = factor(ano), y = total_casos)) +
+      geom_bar_interactive(
+        stat = "identity", 
+        aes(
+          tooltip = paste("Ano:", ano, "<br>Total de Casos:", total_casos), 
+          data_id = ano
+        ),
+        fill = "steelblue"
+      ) +
+      labs(
+        title = "Total de Casos por Ano",
+        x = "Ano",
+        y = "Número de Casos"
+      ) +
+      theme_bw()
+    
+    girafe(ggobj = grafico, width_svg = 8, height_svg = 5)
+})
+
+```
+
+### Plot2
+
+```{r}
+knitr::kable(iris, align = "c")
+```
+
+# 

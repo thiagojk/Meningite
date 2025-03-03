@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Meningite</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="teste_files/libs/clipboard/clipboard.min.js"></script>
+<script src="teste_files/libs/quarto-html/quarto.js"></script>
+<script src="teste_files/libs/quarto-html/popper.min.js"></script>
+<script src="teste_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="teste_files/libs/quarto-html/anchor.min.js"></script>
+<link href="teste_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="teste_files/libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="teste_files/libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="teste_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="teste_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="teste_files/libs/bootstrap/bootstrap-1e44277131ede2af9551bf0523d1408d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="teste_files/libs/bootstrap/bootstrap-dark-5f730bf11b2f8c0bd8bbd3774e949247.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="teste_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+
+<script src="teste_files/libs/jquery-1.11.1/jquery.min.js"></script>
+
+<link href="teste_files/libs/dygraphs-1.1.1/dygraph.css" rel="stylesheet">
+
+<script src="teste_files/libs/dygraphs-1.1.1/dygraph-combined.js"></script>
+
+<script src="teste_files/libs/dygraphs-1.1.1/shapes.js"></script>
+
+<script src="teste_files/libs/moment-2.8.4/moment.js"></script>
+
+<script src="teste_files/libs/moment-timezone-0.2.5/moment-timezone-with-data.js"></script>
+
+<script src="teste_files/libs/moment-fquarter-1.0.0/moment-fquarter.min.js"></script>
+
+<script src="teste_files/libs/dygraphs-binding-1.1.1.6/dygraphs.js"></script>
+
+<script src="teste_files/libs/d3-bundle-5.16.0/d3-bundle.min.js"></script>
+
+<script src="teste_files/libs/d3-lasso-0.0.5/d3-lasso.min.js"></script>
+
+<script src="teste_files/libs/save-svg-as-png-1.4.17/save-svg-as-png.min.js"></script>
+
+<script src="teste_files/libs/flatbush-4.0.0/flatbush.min.js"></script>
+
+<link href="teste_files/libs/ggiraphjs-0.4.6/ggiraphjs.min.css" rel="stylesheet">
+
+<script src="teste_files/libs/ggiraphjs-0.4.6/ggiraphjs.min.js"></script>
+
+<script src="teste_files/libs/girafe-binding-0.8.9/girafe.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Índice</h2>
+   
+  <ul>
+  <li><a href="#relatório-meningite-belém-pa" id="toc-relatório-meningite-belém-pa" class="nav-link active" data-scroll-target="#relatório-meningite-belém-pa">Relatório Meningite Belém-PA</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Meningite</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="relatório-meningite-belém-pa" class="level1">
+<h1>Relatório Meningite Belém-PA</h1>
+<div style="text-align: justify">
+<p>A meningite é uma inflamação das meninges, as membranas que envolvem o cérebro e a medula espinhal, causada por diferentes agentes infecciosos, como bactérias, vírus e fungos. Os sintomas mais comuns incluem febre alta, dor de cabeça intensa, rigidez no pescoço e, em casos graves, confusão mental ou convulsões. A meningite bacteriana é uma emergência médica devido ao alto risco de complicações graves, enquanto a meningite viral geralmente é mais branda. O diagnóstico precoce, realizado por meio da análise do líquido cefalorraquidiano (LCR), e o tratamento adequado são cruciais para reduzir a morbimortalidade.</p>
+<p>Em Belém, no Pará, a meningite é um desafio significativo de saúde pública, especialmente devido às condições socioeconômicas e climáticas que favorecem a disseminação de doenças infecciosas. A alta densidade populacional em áreas com saneamento básico precário e o clima quente e úmido contribuem para a propagação da doença. A vacinação contra agentes como meningococo e pneumococo tem sido essencial para a prevenção, mas o sistema de saúde ainda enfrenta desafios em relação à vigilância epidemiológica e ao acesso a tratamentos. Este relatório busca abordar aspectos epidemiológicos e estratégias de controle da meningite no contexto local.</p>
+<section id="série-histórica" class="level1">
+<h1>Série histórica</h1>
+<section id="casos-mensais" class="level2">
+<h2 class="anchored" data-anchor-id="casos-mensais">Casos Mensais</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset nav-pills tabset-scrollable">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Grafico 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Casos Anuais</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Incidencia</a></li></ul>
+<div class="tab-content nav-pills tabset-scrollable">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<style>
+div.blue { background-color:#C0BAE5; border-radius: 5px; padding: 25px;}
+</style>
+<div class="blue">
+<p>O gráfico apresenta o número de casos de meningite em Belém-PA ao longo do tempo, evidenciando variações significativas com flutuações marcadas por picos e quedas. Esses picos podem estar relacionados a surtos ou períodos de maior circulação do agente causador da doença, enquanto as quedas sugerem possíveis intervenções de saúde pública, como campanhas de vacinação, maior controle epidemiológico ou outros fatores que limitaram a transmissão. A análise também pode indicar uma influência de padrões sazonais ou mudanças nas condições ambientais e sociais que impactam a incidência da meningite na região. Compreender essas oscilações é crucial para avaliar a eficácia das estratégias de prevenção e controle, identificar vulnerabilidades e planejar ações futuras para reduzir os impactos da doença na população.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="dygraphs html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-666fb0558249b4586ac2" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-666fb0558249b4586ac2">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"Casos de Meningite","labels":["month","Casos Notificados","Casos Confirmados"],"legend":"auto","retainDateWindow":false,"ylabel":"Número de Casos","xlabel":"Data","colors":["green","red"],"series":{"Casos Notificados":{"axis":"y"},"Casos Confirmados":{"axis":"y"}},"stackedGraph":true,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2020-01-01T00:00:00.000Z","2020-02-01T00:00:00.000Z","2020-03-01T00:00:00.000Z","2020-04-01T00:00:00.000Z","2020-05-01T00:00:00.000Z","2020-06-01T00:00:00.000Z","2020-07-01T00:00:00.000Z","2020-08-01T00:00:00.000Z","2020-09-01T00:00:00.000Z","2020-10-01T00:00:00.000Z","2020-11-01T00:00:00.000Z","2020-12-01T00:00:00.000Z","2021-01-01T00:00:00.000Z","2021-02-01T00:00:00.000Z","2021-03-01T00:00:00.000Z","2021-04-01T00:00:00.000Z","2021-05-01T00:00:00.000Z","2021-06-01T00:00:00.000Z","2021-07-01T00:00:00.000Z","2021-08-01T00:00:00.000Z","2021-09-01T00:00:00.000Z","2021-10-01T00:00:00.000Z","2021-11-01T00:00:00.000Z","2021-12-01T00:00:00.000Z","2022-01-01T00:00:00.000Z","2022-02-01T00:00:00.000Z","2022-03-01T00:00:00.000Z","2022-04-01T00:00:00.000Z","2022-05-01T00:00:00.000Z","2022-06-01T00:00:00.000Z","2022-07-01T00:00:00.000Z","2022-08-01T00:00:00.000Z","2022-09-01T00:00:00.000Z","2022-10-01T00:00:00.000Z","2022-11-01T00:00:00.000Z","2022-12-01T00:00:00.000Z","2023-01-01T00:00:00.000Z","2023-02-01T00:00:00.000Z","2023-03-01T00:00:00.000Z","2023-04-01T00:00:00.000Z","2023-05-01T00:00:00.000Z","2023-06-01T00:00:00.000Z","2023-07-01T00:00:00.000Z","2023-08-01T00:00:00.000Z","2023-09-01T00:00:00.000Z","2023-10-01T00:00:00.000Z","2023-11-01T00:00:00.000Z","2023-12-01T00:00:00.000Z","2024-01-01T00:00:00.000Z","2024-02-01T00:00:00.000Z","2024-03-01T00:00:00.000Z","2024-04-01T00:00:00.000Z","2024-05-01T00:00:00.000Z","2024-06-01T00:00:00.000Z","2024-07-01T00:00:00.000Z","2024-08-01T00:00:00.000Z","2024-09-01T00:00:00.000Z","2024-10-01T00:00:00.000Z","2024-11-01T00:00:00.000Z","2024-12-01T00:00:00.000Z","2025-01-01T00:00:00.000Z"],[93,98,100,55,49,43,74,44,76,63,70,65,51,60,45,49,52,59,70,62,55,53,52,65,71,43,58,76,76,82,73,72,62,70,74,72,77,58,67,86,89,80,87,96,73,70,65,59,80,57,80,101,91,95,104,90,95,117,103,94,22],[21,29,24,18,12,15,16,9,14,15,21,17,11,12,7,19,12,14,16,18,16,6,12,12,21,13,19,21,24,19,18,19,22,21,19,29,23,16,18,30,31,26,30,33,39,28,20,20,27,13,29,37,37,38,35,28,39,41,36,36,2]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+<div class="blue">
+<p>O gráfico apresenta os casos de meningite em Belém entre 2020 e 2025, destacando variações significativas ao longo dos anos. Em 2020, foram registrados 830 casos, mas houve uma queda de 18,9% em 2021, totalizando 673 casos. Em 2022, os números voltaram a subir, registrando 829 casos, quase equivalente a 2020, com um aumento de 23,2% em relação ao ano anterior. Em 2023, houve um crescimento de 9,4%, atingindo 907 casos. Em 2024, o aumento foi ainda mais acentuado, de 22,1%, com 1.107 casos, o maior número registrado no período. No entanto, em 2025, observa-se uma redução abrupta para 22 casos, representando uma queda de 98% em comparação com 2024, o que pode indicar uma intervenção significativa ou uma alteração nos critérios de notificação.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-199b1a77c75c8ac40a46" style="width:100%;height:278px;"></div>
+<script type="application/json" data-for="htmlwidget-199b1a77c75c8ac40a46">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7' viewBox='0 0 504 216'>\n <defs id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_defs'>\n  <clipPath id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_c1'>\n   <rect x='0' y='0' width='504' height='216'/>\n  <\/clipPath>\n  <clipPath id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_c2'>\n   <rect x='27.65' y='16.85' width='472.36' height='176.25'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_f83531dd_edbc_4262_ad14_51fcb5403da7_c1)'>\n   <rect x='0' y='0' width='504' height='216' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='504' height='216' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.78' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_f83531dd_edbc_4262_ad14_51fcb5403da7_c2)'>\n   <rect x='27.65' y='16.85' width='472.36' height='176.25' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='27.65,163.38 500.01,163.38' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,119.96 500.01,119.96' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,76.54 500.01,76.54' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,33.12 500.01,33.12' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,185.09 500.01,185.09' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,141.67 500.01,141.67' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,98.25 500.01,98.25' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.65,54.83 500.01,54.83' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='73.36,193.10 73.36,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='149.55,193.10 149.55,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='225.74,193.10 225.74,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='301.93,193.10 301.93,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='378.11,193.10 378.11,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='454.30,193.10 454.30,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e1' x='39.08' y='64.96' width='68.57' height='120.13' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2020 &amp;lt;br&amp;gt;Total de Casos: 830' data-id='2020'/>\n   <rect id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e2' x='115.27' y='87.68' width='68.57' height='97.41' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2021 &amp;lt;br&amp;gt;Total de Casos: 673' data-id='2021'/>\n   <rect id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e3' x='191.45' y='65.1' width='68.57' height='119.99' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2022 &amp;lt;br&amp;gt;Total de Casos: 829' data-id='2022'/>\n   <rect id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e4' x='267.64' y='53.81' width='68.57' height='131.28' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2023 &amp;lt;br&amp;gt;Total de Casos: 907' data-id='2023'/>\n   <rect id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e5' x='343.83' y='24.87' width='68.57' height='160.22' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2024 &amp;lt;br&amp;gt;Total de Casos: 1107' data-id='2024'/>\n   <rect id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e6' x='420.02' y='181.91' width='68.57' height='3.18' fill='#4682B4' fill-opacity='1' stroke='none' title='Ano: 2025 &amp;lt;br&amp;gt;Total de Casos: 22' data-id='2025'/>\n   <text id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e7' x='66.25' y='61.9' font-size='6.4pt' font-family='Arial' title='Casos: 830' data-id='2020'>830<\/text>\n   <text id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e8' x='142.43' y='84.63' font-size='6.4pt' font-family='Arial' title='Casos: 673' data-id='2021'>673<\/text>\n   <text id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e9' x='218.62' y='62.05' font-size='6.4pt' font-family='Arial' title='Casos: 829' data-id='2022'>829<\/text>\n   <text id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e10' x='294.81' y='50.76' font-size='6.4pt' font-family='Arial' title='Casos: 907' data-id='2023'>907<\/text>\n   <text id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e11' x='368.94' y='21.81' font-size='6.4pt' font-family='Arial' title='Casos: 1107' data-id='2024'>1107<\/text>\n   <text id='svg_f83531dd_edbc_4262_ad14_51fcb5403da7_e12' x='449.56' y='178.85' font-size='6.4pt' font-family='Arial' title='Casos: 22' data-id='2025'>22<\/text>\n   <rect x='27.65' y='16.85' width='472.36' height='176.25' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.78' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_f83531dd_edbc_4262_ad14_51fcb5403da7_c1)'>\n   <text x='20.51' y='187.38' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='13.39' y='143.96' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>300<\/text>\n   <text x='13.39' y='100.54' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>600<\/text>\n   <text x='13.39' y='57.12' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>900<\/text>\n   <polyline points='25.66,185.09 27.65,185.09' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='25.66,141.67 27.65,141.67' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='25.66,98.25 27.65,98.25' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='25.66,54.83 27.65,54.83' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='73.36,195.09 73.36,193.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='149.55,195.09 149.55,193.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='225.74,195.09 225.74,193.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='301.93,195.09 301.93,193.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='378.11,195.09 378.11,193.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='454.30,195.09 454.30,193.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='66.25' y='201.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2020<\/text>\n   <text x='142.44' y='201.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2021<\/text>\n   <text x='218.63' y='201.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2022<\/text>\n   <text x='294.81' y='201.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2023<\/text>\n   <text x='371' y='201.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2024<\/text>\n   <text x='447.19' y='201.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2025<\/text>\n   <text x='256.72' y='210.33' font-size='6pt' font-family='Arial'>Ano<\/text>\n   <text transform='translate(9.72,137.22) rotate(-90.00)' font-size='6pt' font-family='Arial'>Número de Casos<\/text>\n   <text x='27.65' y='10.85' font-size='7.2pt' font-family='Arial'>Total de Casos por Ano<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_f83531dd_edbc_4262_ad14_51fcb5403da7","ratio":2.333333333333333,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="cell-output-display">
+<div class="dygraphs html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-160a44dd1cb2469fbc64" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-160a44dd1cb2469fbc64">{"x":{"attrs":{"axes":{"x":{"pixelsPerLabel":60,"drawAxis":true},"y":{"drawAxis":true}},"title":"Casos de Meningite","labels":["month","Casos Confirmados","Incidencia"],"legend":"auto","retainDateWindow":false,"ylabel":"Número de Casos","xlabel":"Data","colors":["red","green"],"series":{"Casos Confirmados":{"axis":"y"},"Incidencia":{"axis":"y"}},"stackedGraph":true,"fillGraph":false,"fillAlpha":0.15,"stepPlot":false,"drawPoints":false,"pointSize":1,"drawGapEdgePoints":false,"connectSeparatedPoints":false,"strokeWidth":1,"strokeBorderColor":"white","colorValue":0.5,"colorSaturation":1,"includeZero":false,"drawAxesAtZero":false,"logscale":false,"axisTickSize":3,"axisLineColor":"black","axisLineWidth":0.3,"axisLabelColor":"black","axisLabelFontSize":14,"axisLabelWidth":60,"drawGrid":true,"gridLineWidth":0.3,"rightGap":5,"digitsAfterDecimal":2,"labelsKMB":false,"labelsKMG2":false,"labelsUTC":false,"maxNumberWidth":6,"animatedZooms":false,"mobileDisableYTouch":true,"disableZoom":false},"scale":"monthly","annotations":[],"shadings":[],"events":[],"format":"date","data":[["2020-01-01T00:00:00.000Z","2020-02-01T00:00:00.000Z","2020-03-01T00:00:00.000Z","2020-04-01T00:00:00.000Z","2020-05-01T00:00:00.000Z","2020-06-01T00:00:00.000Z","2020-07-01T00:00:00.000Z","2020-08-01T00:00:00.000Z","2020-09-01T00:00:00.000Z","2020-10-01T00:00:00.000Z","2020-11-01T00:00:00.000Z","2020-12-01T00:00:00.000Z","2021-01-01T00:00:00.000Z","2021-02-01T00:00:00.000Z","2021-03-01T00:00:00.000Z","2021-04-01T00:00:00.000Z","2021-05-01T00:00:00.000Z","2021-06-01T00:00:00.000Z","2021-07-01T00:00:00.000Z","2021-08-01T00:00:00.000Z","2021-09-01T00:00:00.000Z","2021-10-01T00:00:00.000Z","2021-11-01T00:00:00.000Z","2021-12-01T00:00:00.000Z","2022-01-01T00:00:00.000Z","2022-02-01T00:00:00.000Z","2022-03-01T00:00:00.000Z","2022-04-01T00:00:00.000Z","2022-05-01T00:00:00.000Z","2022-06-01T00:00:00.000Z","2022-07-01T00:00:00.000Z","2022-08-01T00:00:00.000Z","2022-09-01T00:00:00.000Z","2022-10-01T00:00:00.000Z","2022-11-01T00:00:00.000Z","2022-12-01T00:00:00.000Z","2023-01-01T00:00:00.000Z","2023-02-01T00:00:00.000Z","2023-03-01T00:00:00.000Z","2023-04-01T00:00:00.000Z","2023-05-01T00:00:00.000Z","2023-06-01T00:00:00.000Z","2023-07-01T00:00:00.000Z","2023-08-01T00:00:00.000Z","2023-09-01T00:00:00.000Z","2023-10-01T00:00:00.000Z","2023-11-01T00:00:00.000Z","2023-12-01T00:00:00.000Z","2024-01-01T00:00:00.000Z","2024-02-01T00:00:00.000Z","2024-03-01T00:00:00.000Z","2024-04-01T00:00:00.000Z","2024-05-01T00:00:00.000Z","2024-06-01T00:00:00.000Z","2024-07-01T00:00:00.000Z","2024-08-01T00:00:00.000Z","2024-09-01T00:00:00.000Z","2024-10-01T00:00:00.000Z","2024-11-01T00:00:00.000Z","2024-12-01T00:00:00.000Z","2025-01-01T00:00:00.000Z"],[21,29,24,18,12,15,16,9,14,15,21,17,11,12,7,19,12,14,16,18,16,6,12,12,21,13,19,21,24,19,18,19,22,21,19,29,23,16,18,30,31,26,30,33,39,28,20,20,27,13,29,37,37,38,35,28,39,41,36,36,2],[1.555555555555556,2.148148148148148,1.777777777777778,1.333333333333333,0.8888888888888888,1.111111111111111,1.185185185185185,0.6666666666666666,1.037037037037037,1.111111111111111,1.555555555555556,1.259259259259259,0.8148148148148149,0.8888888888888888,0.5185185185185185,1.407407407407407,0.8888888888888888,1.037037037037037,1.185185185185185,1.333333333333333,1.185185185185185,0.4444444444444444,0.8888888888888888,0.8888888888888888,1.555555555555556,0.962962962962963,1.407407407407407,1.555555555555556,1.777777777777778,1.407407407407407,1.333333333333333,1.407407407407407,1.62962962962963,1.555555555555556,1.407407407407407,2.148148148148148,1.703703703703704,1.185185185185185,1.333333333333333,2.222222222222222,2.296296296296296,1.925925925925926,2.222222222222222,2.444444444444445,2.888888888888889,2.074074074074074,1.481481481481481,1.481481481481481,2,0.962962962962963,2.148148148148148,2.740740740740741,2.740740740740741,2.814814814814814,2.592592592592593,2.074074074074074,2.888888888888889,3.037037037037037,2.666666666666667,2.666666666666667,0.1481481481481481]],"fixedtz":false,"tzone":"UTC"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="informações-dos-pacientes" class="level1">
+<h1>Informações dos Pacientes</h1>
+<section id="infos" class="level2">
+<h2 class="anchored" data-anchor-id="infos">Infos</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset nav-pills tabset-scrollable">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Sexo</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Sexo 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Sexo 3</a></li></ul>
+<div class="tab-content nav-pills tabset-scrollable">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+<div class="blue">
+<p>A análise da distribuição dos casos de meningite em Belém, PA, evidencia uma ligeira predominância do sexo masculino, com 2.298 registros, em comparação ao sexo feminino, com 2.069 casos. Essa diferença, embora não muito acentuada, pode refletir fatores biológicos, comportamentais ou sociais que influenciam a suscetibilidade e exposição à doença. Além disso, a elevada incidência total de casos ressalta a importância de estratégias de vigilância epidemiológica, vacinação e campanhas de conscientização para mitigar a propagação da meningite na região, especialmente considerando fatores específicos do contexto local, como acesso à saúde e densidade populacional.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-32d8c6b0f9194de9b751" style="width:100%;height:371px;"></div>
+<script type="application/json" data-for="htmlwidget-32d8c6b0f9194de9b751">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317' viewBox='0 0 504 288'>\n <defs id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_defs'>\n  <clipPath id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_c1'>\n   <rect x='0' y='0' width='504' height='288'/>\n  <\/clipPath>\n  <clipPath id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_c2'>\n   <rect x='51' y='26.53' width='447.52' height='224.99'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_c1)'>\n   <rect x='0' y='0' width='504' height='288' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='504' height='288' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_c2)'>\n   <rect x='51' y='26.53' width='447.52' height='224.99' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='51.00,219.04 498.52,219.04' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,174.53 498.52,174.53' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,130.03 498.52,130.03' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,85.53 498.52,85.53' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,41.02 498.52,41.02' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,241.29 498.52,241.29' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,196.78 498.52,196.78' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,152.28 498.52,152.28' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,107.78 498.52,107.78' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='51.00,63.28 498.52,63.28' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='173.05,251.51 173.05,26.53' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='376.47,251.51 376.47,26.53' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_e1' x='122.2' y='57.13' width='101.71' height='184.15' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='2069' data-id='Feminino'/>\n   <rect id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_e2' x='325.62' y='36.75' width='101.71' height='204.54' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='2298' data-id='Masculino'/>\n   <polygon id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_e3' points='155.53,66.49 190.57,66.49 190.47,66.49 190.88,66.47 191.28,66.39 191.67,66.25 192.02,66.04 192.34,65.78 192.62,65.47 192.84,65.12 193.00,64.74 193.10,64.34 193.13,63.93 193.13,63.93 193.13,50.34 193.13,50.34 193.10,49.93 193.00,49.53 192.84,49.15 192.62,48.80 192.34,48.49 192.02,48.23 191.67,48.02 191.28,47.88 190.88,47.79 190.57,47.78 155.53,47.78 155.84,47.79 155.43,47.78 155.02,47.83 154.63,47.94 154.25,48.12 153.91,48.35 153.62,48.64 153.37,48.97 153.18,49.33 153.05,49.72 152.98,50.13 152.97,50.34 152.97,63.93 152.98,63.73 152.98,64.14 153.05,64.54 153.18,64.94 153.37,65.30 153.62,65.63 153.91,65.92 154.25,66.15 154.63,66.33 155.02,66.44 155.43,66.49' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='2069' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_e4' x='157.24' y='62.22' font-size='10.67pt' font-weight='bold' font-family='Arial' title='2069' data-id='Feminino' tooltip_fill='white'>2069<\/text>\n   <polygon id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_e5' points='358.95,46.11 393.99,46.11 393.89,46.11 394.30,46.09 394.70,46.01 395.09,45.86 395.44,45.66 395.76,45.40 396.04,45.09 396.26,44.74 396.42,44.36 396.52,43.96 396.55,43.55 396.55,43.55 396.55,29.95 396.55,29.95 396.52,29.54 396.42,29.14 396.26,28.76 396.04,28.42 395.76,28.11 395.44,27.85 395.09,27.64 394.70,27.49 394.30,27.41 393.99,27.39 358.95,27.39 359.26,27.41 358.85,27.40 358.44,27.45 358.04,27.56 357.67,27.74 357.33,27.97 357.03,28.26 356.79,28.59 356.60,28.95 356.47,29.34 356.40,29.75 356.39,29.95 356.39,43.55 356.40,43.34 356.40,43.76 356.47,44.16 356.60,44.55 356.79,44.92 357.03,45.25 357.33,45.53 357.67,45.77 358.04,45.94 358.44,46.06 358.85,46.11' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='2298' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_e6' x='360.66' y='41.84' font-size='10.67pt' font-weight='bold' font-family='Arial' title='2298' data-id='Masculino' tooltip_fill='white'>2298<\/text>\n   <rect x='51' y='26.53' width='447.52' height='224.99' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317_c1)'>\n   <text x='39.85' y='245.29' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='27.41' y='200.79' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>500<\/text>\n   <text x='21.19' y='156.29' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>1000<\/text>\n   <text x='21.19' y='111.79' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>1500<\/text>\n   <text x='21.19' y='67.28' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2000<\/text>\n   <polyline points='48.26,241.29 51.00,241.29' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='48.26,196.78 51.00,196.78' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='48.26,152.28 51.00,152.28' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='48.26,107.78 51.00,107.78' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='48.26,63.28 51.00,63.28' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='173.05,254.25 173.05,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='376.47,254.25 376.47,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='148.19' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Feminino<\/text>\n   <text x='349.12' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Masculino<\/text>\n   <text x='258.04' y='279.58' font-size='10.5pt' font-weight='bold' font-family='Arial'>Sexo<\/text>\n   <text transform='translate(15.50,176.35) rotate(-90.00)' font-size='10.5pt' font-weight='bold' font-family='Arial'>Frequência<\/text>\n   <text x='191.68' y='17.51' font-size='12.6pt' font-weight='bold' font-family='Arial'>Distribuição de Sexo<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_08a2cd23_4f6d_47b5_88c2_68f9cecea317","ratio":1.75,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+<div class="blue">
+<p>O gráfico evidencia a evolução dos casos de meningite em Belém ao longo dos anos, segmentados por sexo. Observa-se um aumento significativo no número de casos totais em 2024, com os registros de mulheres (576 casos) superando os de homens (531 casos). Nos anos anteriores, os casos mantiveram-se relativamente estáveis, com uma leve predominância do sexo masculino em 2020 (397 homens e 433 mulheres) e 2022 (405 homens e 423 mulheres). Essa variação em 2024 pode indicar fatores como surtos localizados, mudanças nas políticas de vigilância ou acesso à saúde. A análise reforça a importância de estratégias de prevenção, como campanhas de vacinação e diagnóstico precoce, para reduzir a incidência da doença na região.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-119af3bb9abfeaee33f0" style="width:100%;height:371px;"></div>
+<script type="application/json" data-for="htmlwidget-119af3bb9abfeaee33f0">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10' viewBox='0 0 504 288'>\n <defs id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_defs'>\n  <clipPath id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_c1'>\n   <rect x='0' y='0' width='504' height='288'/>\n  <\/clipPath>\n  <clipPath id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_c2'>\n   <rect x='44.78' y='65.72' width='453.74' height='185.79'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_c1)'>\n   <rect x='0' y='0' width='504' height='288' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='504' height='288' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_c2)'>\n   <rect x='44.78' y='65.72' width='453.74' height='185.79' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='44.78,220.18 498.52,220.18' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,174.41 498.52,174.41' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,128.64 498.52,128.64' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,82.86 498.52,82.86' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='159.15,251.51 159.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='309.15,251.51 309.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='459.15,251.51 459.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,243.07 498.52,243.07' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,197.30 498.52,197.30' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,151.52 498.52,151.52' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,105.75 498.52,105.75' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='84.15,251.51 84.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='234.15,251.51 234.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='384.15,251.51 384.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e1' x='65.4' y='116.43' width='37.5' height='60.57' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2020&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 397' data-id='Feminino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e2' x='140.4' y='140.39' width='37.5' height='47.15' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2021&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 309' data-id='Feminino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e3' x='215.4' y='116.74' width='37.5' height='61.79' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2022&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 405' data-id='Feminino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e4' x='290.4' y='104.68' width='37.5' height='63.62' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2023&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 417' data-id='Feminino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e5' x='365.4' y='74.17' width='37.5' height='81.02' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2024&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 531' data-id='Feminino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e6' x='440.4' y='239.71' width='37.5' height='1.53' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2025&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 10' data-id='Feminino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e7' x='65.4' y='177' width='37.5' height='66.07' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2020&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 433' data-id='Masculino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e8' x='140.4' y='187.53' width='37.5' height='55.54' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2021&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 364' data-id='Masculino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e9' x='215.4' y='178.53' width='37.5' height='64.54' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2022&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 423' data-id='Masculino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e10' x='290.4' y='168.31' width='37.5' height='74.76' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2023&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 490' data-id='Masculino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e11' x='365.4' y='155.19' width='37.5' height='87.88' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2024&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 576' data-id='Masculino'/>\n   <rect id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e12' x='440.4' y='241.24' width='37.5' height='1.83' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2025&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 12' data-id='Masculino'/>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e13' points='73.30,154.20 95.01,154.20 94.93,154.20 95.26,154.19 95.58,154.12 95.89,154.01 96.18,153.84 96.43,153.63 96.65,153.39 96.83,153.11 96.96,152.80 97.04,152.48 97.06,152.16 97.06,152.16 97.06,141.28 97.06,141.28 97.04,140.95 96.96,140.63 96.83,140.33 96.65,140.05 96.43,139.80 96.18,139.59 95.89,139.43 95.58,139.31 95.26,139.25 95.01,139.23 73.30,139.23 73.54,139.25 73.21,139.23 72.89,139.27 72.57,139.36 72.27,139.51 72.00,139.69 71.76,139.92 71.56,140.19 71.41,140.48 71.31,140.79 71.25,141.12 71.25,141.28 71.25,152.16 71.25,151.99 71.25,152.32 71.31,152.65 71.41,152.96 71.56,153.25 71.76,153.51 72.00,153.74 72.27,153.93 72.57,154.07 72.89,154.16 73.21,154.20' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='397' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e14' x='74.66' y='150.79' font-size='8.54pt' font-family='Arial' title='397' data-id='Feminino' tooltip_fill='white'>397<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e15' points='148.29,171.44 170.01,171.44 169.93,171.44 170.26,171.43 170.58,171.36 170.89,171.25 171.18,171.08 171.43,170.87 171.65,170.63 171.83,170.35 171.95,170.04 172.03,169.72 172.06,169.40 172.06,169.40 172.06,158.52 172.06,158.52 172.03,158.19 171.95,157.87 171.83,157.57 171.65,157.29 171.43,157.04 171.18,156.84 170.89,156.67 170.58,156.55 170.26,156.49 170.01,156.47 148.29,156.47 148.54,156.49 148.21,156.47 147.88,156.51 147.57,156.61 147.27,156.75 147.00,156.93 146.76,157.16 146.56,157.43 146.41,157.72 146.30,158.03 146.25,158.36 146.25,158.52 146.25,169.40 146.25,169.23 146.25,169.56 146.30,169.89 146.41,170.20 146.56,170.49 146.76,170.75 147.00,170.98 147.27,171.17 147.57,171.31 147.88,171.40 148.21,171.44' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='309' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e16' x='149.66' y='168.03' font-size='8.54pt' font-family='Arial' title='309' data-id='Feminino' tooltip_fill='white'>309<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e17' points='223.29,155.12 245.01,155.12 244.93,155.12 245.26,155.10 245.58,155.04 245.89,154.92 246.17,154.76 246.43,154.55 246.65,154.30 246.82,154.02 246.95,153.72 247.03,153.40 247.06,153.07 247.06,153.07 247.06,142.20 247.06,142.20 247.03,141.87 246.95,141.55 246.82,141.24 246.65,140.97 246.43,140.72 246.17,140.51 245.89,140.35 245.58,140.23 245.26,140.16 245.01,140.15 223.29,140.15 223.54,140.16 223.21,140.15 222.88,140.19 222.57,140.28 222.27,140.42 222.00,140.61 221.76,140.84 221.56,141.10 221.41,141.39 221.30,141.71 221.25,142.03 221.24,142.20 221.24,153.07 221.25,152.91 221.25,153.24 221.30,153.56 221.41,153.87 221.56,154.17 221.76,154.43 222.00,154.66 222.27,154.84 222.57,154.99 222.88,155.08 223.21,155.12' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='405' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e18' x='224.66' y='151.7' font-size='8.54pt' font-family='Arial' title='405' data-id='Feminino' tooltip_fill='white'>405<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e19' points='298.29,143.98 320.01,143.98 319.93,143.98 320.26,143.97 320.58,143.90 320.89,143.78 321.17,143.62 321.43,143.41 321.65,143.16 321.82,142.88 321.95,142.58 322.03,142.26 322.06,141.93 322.06,141.93 322.06,131.06 322.06,131.06 322.03,130.73 321.95,130.41 321.82,130.11 321.65,129.83 321.43,129.58 321.17,129.37 320.89,129.21 320.58,129.09 320.26,129.02 320.01,129.01 298.29,129.01 298.54,129.02 298.21,129.01 297.88,129.05 297.56,129.14 297.27,129.28 297.00,129.47 296.76,129.70 296.56,129.96 296.41,130.25 296.30,130.57 296.25,130.89 296.24,131.06 296.24,141.93 296.25,141.77 296.25,142.10 296.30,142.42 296.41,142.74 296.56,143.03 296.76,143.29 297.00,143.52 297.27,143.71 297.56,143.85 297.88,143.94 298.21,143.98' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='417' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e20' x='299.66' y='140.57' font-size='8.54pt' font-family='Arial' title='417' data-id='Feminino' tooltip_fill='white'>417<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e21' points='373.29,122.16 395.01,122.16 394.92,122.16 395.25,122.15 395.58,122.08 395.89,121.97 396.17,121.80 396.43,121.59 396.64,121.34 396.82,121.07 396.95,120.76 397.03,120.44 397.06,120.11 397.06,120.11 397.06,109.24 397.06,109.24 397.03,108.91 396.95,108.59 396.82,108.29 396.64,108.01 396.43,107.76 396.17,107.55 395.89,107.39 395.58,107.27 395.25,107.21 395.01,107.19 373.29,107.19 373.54,107.21 373.21,107.19 372.88,107.23 372.56,107.32 372.26,107.47 371.99,107.65 371.76,107.88 371.56,108.14 371.40,108.44 371.30,108.75 371.25,109.07 371.24,109.24 371.24,120.11 371.25,119.95 371.25,120.28 371.30,120.60 371.40,120.92 371.56,121.21 371.76,121.47 371.99,121.70 372.26,121.89 372.56,122.03 372.88,122.12 373.21,122.16' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='531' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e22' x='374.65' y='118.75' font-size='8.54pt' font-family='Arial' title='531' data-id='Feminino' tooltip_fill='white'>531<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e23' points='451.45,247.96 466.84,247.96 466.76,247.96 467.09,247.95 467.41,247.88 467.72,247.76 468.00,247.60 468.26,247.39 468.48,247.14 468.65,246.86 468.78,246.56 468.86,246.24 468.89,245.91 468.89,245.91 468.89,235.04 468.89,235.04 468.86,234.71 468.78,234.39 468.65,234.09 468.48,233.81 468.26,233.56 468.00,233.35 467.72,233.19 467.41,233.07 467.09,233.00 466.84,232.99 451.45,232.99 451.70,233.00 451.37,232.99 451.04,233.03 450.73,233.12 450.43,233.26 450.16,233.45 449.92,233.68 449.72,233.94 449.57,234.23 449.46,234.55 449.41,234.87 449.40,235.04 449.40,245.91 449.41,245.75 449.41,246.08 449.46,246.40 449.57,246.72 449.72,247.01 449.92,247.27 450.16,247.50 450.43,247.69 450.73,247.83 451.04,247.92 451.37,247.96' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='10' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e24' x='452.82' y='244.55' font-size='8.54pt' font-family='Arial' title='10' data-id='Feminino' tooltip_fill='white'>10<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e25' points='73.30,217.52 95.01,217.52 94.93,217.52 95.26,217.51 95.58,217.44 95.89,217.32 96.18,217.16 96.43,216.95 96.65,216.70 96.83,216.43 96.96,216.12 97.04,215.80 97.06,215.47 97.06,215.47 97.06,204.60 97.06,204.60 97.04,204.27 96.96,203.95 96.83,203.65 96.65,203.37 96.43,203.12 96.18,202.91 95.89,202.75 95.58,202.63 95.26,202.57 95.01,202.55 73.30,202.55 73.54,202.57 73.21,202.55 72.89,202.59 72.57,202.68 72.27,202.83 72.00,203.01 71.76,203.24 71.56,203.50 71.41,203.80 71.31,204.11 71.25,204.43 71.25,204.60 71.25,215.47 71.25,215.31 71.25,215.64 71.31,215.96 71.41,216.28 71.56,216.57 71.76,216.83 72.00,217.06 72.27,217.25 72.57,217.39 72.89,217.48 73.21,217.52' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='433' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e26' x='74.66' y='214.11' font-size='8.54pt' font-family='Arial' title='433' data-id='Masculino' tooltip_fill='white'>433<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e27' points='148.29,222.79 170.01,222.79 169.93,222.78 170.26,222.77 170.58,222.71 170.89,222.59 171.18,222.42 171.43,222.22 171.65,221.97 171.83,221.69 171.95,221.39 172.03,221.07 172.06,220.74 172.06,220.74 172.06,209.86 172.06,209.86 172.03,209.53 171.95,209.21 171.83,208.91 171.65,208.63 171.43,208.39 171.18,208.18 170.89,208.01 170.58,207.90 170.26,207.83 170.01,207.81 148.29,207.81 148.54,207.83 148.21,207.82 147.88,207.86 147.57,207.95 147.27,208.09 147.00,208.28 146.76,208.50 146.56,208.77 146.41,209.06 146.30,209.37 146.25,209.70 146.25,209.86 146.25,220.74 146.25,220.57 146.25,220.90 146.30,221.23 146.41,221.54 146.56,221.83 146.76,222.10 147.00,222.32 147.27,222.51 147.57,222.65 147.88,222.74 148.21,222.78' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='364' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e28' x='149.66' y='219.37' font-size='8.54pt' font-family='Arial' title='364' data-id='Masculino' tooltip_fill='white'>364<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e29' points='223.29,218.29 245.01,218.29 244.93,218.28 245.26,218.27 245.58,218.20 245.89,218.09 246.17,217.92 246.43,217.71 246.65,217.47 246.82,217.19 246.95,216.89 247.03,216.57 247.06,216.24 247.06,216.24 247.06,205.36 247.06,205.36 247.03,205.03 246.95,204.71 246.82,204.41 246.65,204.13 246.43,203.88 246.17,203.68 245.89,203.51 245.58,203.39 245.26,203.33 245.01,203.31 223.29,203.31 223.54,203.33 223.21,203.32 222.88,203.35 222.57,203.45 222.27,203.59 222.00,203.78 221.76,204.00 221.56,204.27 221.41,204.56 221.30,204.87 221.25,205.20 221.24,205.36 221.24,216.24 221.25,216.07 221.25,216.40 221.30,216.73 221.41,217.04 221.56,217.33 221.76,217.60 222.00,217.82 222.27,218.01 222.57,218.15 222.88,218.24 223.21,218.28' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='423' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e30' x='224.66' y='214.87' font-size='8.54pt' font-family='Arial' title='423' data-id='Masculino' tooltip_fill='white'>423<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e31' points='298.29,213.17 320.01,213.17 319.93,213.17 320.26,213.16 320.58,213.09 320.89,212.98 321.17,212.81 321.43,212.60 321.65,212.36 321.82,212.08 321.95,211.77 322.03,211.45 322.06,211.13 322.06,211.13 322.06,200.25 322.06,200.25 322.03,199.92 321.95,199.60 321.82,199.30 321.65,199.02 321.43,198.77 321.17,198.56 320.89,198.40 320.58,198.28 320.26,198.22 320.01,198.20 298.29,198.20 298.54,198.22 298.21,198.20 297.88,198.24 297.56,198.34 297.27,198.48 297.00,198.66 296.76,198.89 296.56,199.16 296.41,199.45 296.30,199.76 296.25,200.09 296.24,200.25 296.24,211.13 296.25,210.96 296.25,211.29 296.30,211.62 296.41,211.93 296.56,212.22 296.76,212.48 297.00,212.71 297.27,212.90 297.56,213.04 297.88,213.13 298.21,213.17' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='490' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e32' x='299.66' y='209.76' font-size='8.54pt' font-family='Arial' title='490' data-id='Masculino' tooltip_fill='white'>490<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e33' points='373.29,206.61 395.01,206.61 394.92,206.61 395.25,206.60 395.58,206.53 395.89,206.42 396.17,206.25 396.43,206.04 396.64,205.80 396.82,205.52 396.95,205.21 397.03,204.89 397.06,204.56 397.06,204.56 397.06,193.69 397.06,193.69 397.03,193.36 396.95,193.04 396.82,192.74 396.64,192.46 396.43,192.21 396.17,192.00 395.89,191.84 395.58,191.72 395.25,191.66 395.01,191.64 373.29,191.64 373.54,191.66 373.21,191.64 372.88,191.68 372.56,191.77 372.26,191.92 371.99,192.10 371.76,192.33 371.56,192.60 371.40,192.89 371.30,193.20 371.25,193.53 371.24,193.69 371.24,204.56 371.25,204.40 371.25,204.73 371.30,205.05 371.40,205.37 371.56,205.66 371.76,205.92 371.99,206.15 372.26,206.34 372.56,206.48 372.88,206.57 373.21,206.61' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='576' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e34' x='374.65' y='203.2' font-size='8.54pt' font-family='Arial' title='576' data-id='Masculino' tooltip_fill='white'>576<\/text>\n   <polygon id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e35' points='451.45,249.64 466.84,249.64 466.76,249.64 467.09,249.62 467.41,249.56 467.72,249.44 468.00,249.28 468.26,249.07 468.48,248.82 468.65,248.54 468.78,248.24 468.86,247.92 468.89,247.59 468.89,247.59 468.89,236.72 468.89,236.72 468.86,236.39 468.78,236.07 468.65,235.76 468.48,235.49 468.26,235.24 468.00,235.03 467.72,234.87 467.41,234.75 467.09,234.68 466.84,234.67 451.45,234.67 451.70,234.68 451.37,234.67 451.04,234.71 450.73,234.80 450.43,234.94 450.16,235.13 449.92,235.36 449.72,235.62 449.57,235.91 449.46,236.23 449.41,236.55 449.40,236.72 449.40,247.59 449.41,247.43 449.41,247.76 449.46,248.08 449.57,248.39 449.72,248.69 449.92,248.95 450.16,249.18 450.43,249.37 450.73,249.51 451.04,249.60 451.37,249.64' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='12' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_e36' x='452.82' y='246.23' font-size='8.54pt' font-family='Arial' title='12' data-id='Masculino' tooltip_fill='white'>12<\/text>\n   <rect x='44.78' y='65.72' width='453.74' height='185.79' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_1143144e_dca6_4dc3_abd6_d9ca86805e10_c1)'>\n   <text x='33.63' y='247.08' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='21.19' y='201.3' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>300<\/text>\n   <text x='21.19' y='155.53' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>600<\/text>\n   <text x='21.19' y='109.76' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>900<\/text>\n   <polyline points='42.04,243.07 44.78,243.07' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,197.30 44.78,197.30' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,151.52 44.78,151.52' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,105.75 44.78,105.75' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='84.15,254.25 84.15,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='234.15,254.25 234.15,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='384.15,254.25 384.15,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='71.71' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2020<\/text>\n   <text x='221.71' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2022<\/text>\n   <text x='371.71' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2024<\/text>\n   <text x='258.05' y='279.58' font-size='10.5pt' font-weight='bold' font-family='Arial'>Ano<\/text>\n   <text transform='translate(15.50,195.95) rotate(-90.00)' font-size='10.5pt' font-weight='bold' font-family='Arial'>Frequência<\/text>\n   <rect x='166.27' y='26.53' width='210.77' height='28.24' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <text x='171.75' y='45.66' font-size='10.5pt' font-weight='bold' font-family='Arial'>SEXO<\/text>\n   <rect x='216.13' y='32' width='17.28' height='17.28' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <rect x='216.84' y='32.71' width='15.86' height='15.86' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt'/>\n   <rect x='294.09' y='32' width='17.28' height='17.28' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <rect x='294.8' y='32.71' width='15.86' height='15.86' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt'/>\n   <text x='238.89' y='44.65' font-size='8.4pt' font-weight='bold' font-family='Arial'>Feminino<\/text>\n   <text x='316.85' y='44.65' font-size='8.4pt' font-weight='bold' font-family='Arial'>Masculino<\/text>\n   <text x='154.36' y='17.51' font-size='12.6pt' font-weight='bold' font-family='Arial'>Distribuição de Sexo por Ano<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_1143144e_dca6_4dc3_abd6_d9ca86805e10","ratio":1.75,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+<div class="blue">
+<p>O gráfico evidencia a evolução dos casos de meningite em Belém ao longo dos anos, segmentados por sexo. Observa-se um aumento significativo no número de casos totais em 2024, com os registros de mulheres (576 casos) superando os de homens (531 casos). Nos anos anteriores, os casos mantiveram-se relativamente estáveis, com uma leve predominância do sexo masculino em 2020 (397 homens e 433 mulheres) e 2022 (405 homens e 423 mulheres). Essa variação em 2024 pode indicar fatores como surtos localizados, mudanças nas políticas de vigilância ou acesso à saúde. A análise reforça a importância de estratégias de prevenção, como campanhas de vacinação e diagnóstico precoce, para reduzir a incidência da doença na região.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-e67285b13f4edc2d5968" style="width:100%;height:371px;"></div>
+<script type="application/json" data-for="htmlwidget-e67285b13f4edc2d5968">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb' viewBox='0 0 504 288'>\n <defs id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_defs'>\n  <clipPath id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_c1'>\n   <rect x='0' y='0' width='504' height='288'/>\n  <\/clipPath>\n  <clipPath id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_c2'>\n   <rect x='44.78' y='65.72' width='453.74' height='185.79'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_c1)'>\n   <rect x='0' y='0' width='504' height='288' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='504' height='288' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_c2)'>\n   <rect x='44.78' y='65.72' width='453.74' height='185.79' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='44.78,221.74 498.52,221.74' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,179.09 498.52,179.09' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,136.44 498.52,136.44' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,93.79 498.52,93.79' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='159.15,251.51 159.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='309.15,251.51 309.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='459.15,251.51 459.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,243.07 498.52,243.07' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,200.42 498.52,200.42' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,157.77 498.52,157.77' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,115.11 498.52,115.11' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='44.78,72.46 498.52,72.46' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='84.15,251.51 84.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='234.15,251.51 234.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='384.15,251.51 384.15,65.72' fill='none' stroke='#EBEBEB' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e1' x='65.4' y='153.07' width='37.5' height='38.39' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2020&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 90' data-id='Feminino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e2' x='140.4' y='176.96' width='37.5' height='24.31' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2021&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 57' data-id='Feminino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e3' x='215.4' y='138.57' width='37.5' height='47.77' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2022&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 112' data-id='Feminino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e4' x='290.4' y='109.14' width='37.5' height='58.86' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2023&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 138' data-id='Feminino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e5' x='365.4' y='74.17' width='37.5' height='68.67' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2024&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 161' data-id='Feminino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e6' x='440.4' y='242.22' width='37.5' height='0.43' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2025&amp;lt;br/&amp;gt;Sexo: Feminino&amp;lt;br/&amp;gt;Casos: 1' data-id='Feminino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e7' x='65.4' y='191.46' width='37.5' height='51.61' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2020&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 121' data-id='Masculino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e8' x='140.4' y='201.27' width='37.5' height='41.8' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2021&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 98' data-id='Masculino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e9' x='215.4' y='186.34' width='37.5' height='56.73' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2022&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 133' data-id='Masculino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e10' x='290.4' y='168' width='37.5' height='75.07' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2023&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 176' data-id='Masculino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e11' x='365.4' y='142.84' width='37.5' height='100.23' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2024&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 235' data-id='Masculino'/>\n   <rect id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e12' x='440.4' y='242.64' width='37.5' height='0.43' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt' title='Ano: 2025&amp;lt;br/&amp;gt;Sexo: Masculino&amp;lt;br/&amp;gt;Casos: 1' data-id='Masculino'/>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e13' points='76.46,179.75 91.85,179.75 91.77,179.75 92.10,179.74 92.42,179.67 92.73,179.56 93.01,179.39 93.27,179.18 93.49,178.94 93.66,178.66 93.79,178.35 93.87,178.03 93.90,177.70 93.90,177.70 93.90,166.83 93.90,166.83 93.87,166.50 93.79,166.18 93.66,165.88 93.49,165.60 93.27,165.35 93.01,165.14 92.73,164.98 92.42,164.86 92.10,164.80 91.85,164.78 76.46,164.78 76.71,164.80 76.38,164.78 76.05,164.82 75.73,164.91 75.44,165.06 75.16,165.24 74.93,165.47 74.73,165.73 74.58,166.03 74.47,166.34 74.42,166.66 74.41,166.83 74.41,177.70 74.42,177.54 74.42,177.87 74.47,178.19 74.58,178.51 74.73,178.80 74.93,179.06 75.16,179.29 75.44,179.48 75.73,179.62 76.05,179.71 76.38,179.75' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='90' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e14' x='77.83' y='176.34' font-size='8.54pt' font-family='Arial' title='90' data-id='Feminino' tooltip_fill='white'>90<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e15' points='151.46,196.60 166.85,196.60 166.76,196.60 167.09,196.59 167.42,196.52 167.73,196.40 168.01,196.24 168.27,196.03 168.49,195.78 168.66,195.50 168.79,195.20 168.87,194.88 168.90,194.55 168.90,194.55 168.90,183.68 168.90,183.68 168.87,183.35 168.79,183.03 168.66,182.73 168.49,182.45 168.27,182.20 168.01,181.99 167.73,181.83 167.42,181.71 167.09,181.64 166.85,181.63 151.46,181.63 151.71,181.64 151.38,181.63 151.05,181.67 150.73,181.76 150.43,181.90 150.16,182.09 149.92,182.32 149.73,182.58 149.57,182.87 149.47,183.19 149.42,183.51 149.41,183.68 149.41,194.55 149.42,194.39 149.42,194.72 149.47,195.04 149.57,195.35 149.73,195.65 149.92,195.91 150.16,196.14 150.43,196.33 150.73,196.47 151.05,196.56 151.38,196.60' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='57' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e16' x='152.82' y='193.19' font-size='8.54pt' font-family='Arial' title='57' data-id='Feminino' tooltip_fill='white'>57<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e17' points='223.71,169.94 244.59,169.94 244.51,169.94 244.84,169.93 245.16,169.86 245.47,169.75 245.75,169.58 246.01,169.37 246.23,169.13 246.40,168.85 246.53,168.54 246.61,168.22 246.64,167.89 246.64,167.89 246.64,157.02 246.64,157.02 246.61,156.69 246.53,156.37 246.40,156.07 246.23,155.79 246.01,155.54 245.75,155.33 245.47,155.17 245.16,155.05 244.84,154.99 244.59,154.97 223.71,154.97 223.96,154.99 223.63,154.97 223.30,155.01 222.99,155.10 222.69,155.25 222.42,155.43 222.18,155.66 221.98,155.93 221.83,156.22 221.72,156.53 221.67,156.86 221.66,157.02 221.66,167.89 221.67,167.73 221.67,168.06 221.72,168.38 221.83,168.70 221.98,168.99 222.18,169.25 222.42,169.48 222.69,169.67 222.99,169.81 223.30,169.90 223.63,169.94' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='112' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e18' x='225.08' y='166.53' font-size='8.54pt' font-family='Arial' title='112' data-id='Feminino' tooltip_fill='white'>112<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e19' points='298.29,146.06 320.01,146.06 319.93,146.06 320.26,146.04 320.58,145.98 320.89,145.86 321.17,145.70 321.43,145.49 321.65,145.24 321.82,144.96 321.95,144.66 322.03,144.34 322.06,144.01 322.06,144.01 322.06,133.13 322.06,133.13 322.03,132.81 321.95,132.49 321.82,132.18 321.65,131.90 321.43,131.66 321.17,131.45 320.89,131.28 320.58,131.17 320.26,131.10 320.01,131.09 298.29,131.09 298.54,131.10 298.21,131.09 297.88,131.13 297.56,131.22 297.27,131.36 297.00,131.55 296.76,131.78 296.56,132.04 296.41,132.33 296.30,132.64 296.25,132.97 296.24,133.13 296.24,144.01 296.25,143.84 296.25,144.17 296.30,144.50 296.41,144.81 296.56,145.10 296.76,145.37 297.00,145.60 297.27,145.78 297.56,145.93 297.88,146.02 298.21,146.06' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='138' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e20' x='299.66' y='142.64' font-size='8.54pt' font-family='Arial' title='138' data-id='Feminino' tooltip_fill='white'>138<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e21' points='373.29,115.99 395.01,115.99 394.92,115.99 395.25,115.97 395.58,115.91 395.89,115.79 396.17,115.63 396.43,115.42 396.64,115.17 396.82,114.89 396.95,114.59 397.03,114.27 397.06,113.94 397.06,113.94 397.06,103.07 397.06,103.07 397.03,102.74 396.95,102.42 396.82,102.11 396.64,101.83 396.43,101.59 396.17,101.38 395.89,101.21 395.58,101.10 395.25,101.03 395.01,101.02 373.29,101.02 373.54,101.03 373.21,101.02 372.88,101.06 372.56,101.15 372.26,101.29 371.99,101.48 371.76,101.71 371.56,101.97 371.40,102.26 371.30,102.58 371.25,102.90 371.24,103.07 371.24,113.94 371.25,113.78 371.25,114.10 371.30,114.43 371.40,114.74 371.56,115.04 371.76,115.30 371.99,115.53 372.26,115.71 372.56,115.86 372.88,115.95 373.21,115.99' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='161' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e22' x='374.65' y='112.57' font-size='8.54pt' font-family='Arial' title='161' data-id='Feminino' tooltip_fill='white'>161<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e23' points='454.62,249.92 463.68,249.92 463.59,249.91 463.92,249.90 464.25,249.83 464.55,249.72 464.84,249.55 465.10,249.34 465.31,249.10 465.49,248.82 465.62,248.52 465.70,248.20 465.73,247.87 465.73,247.87 465.73,236.99 465.73,236.99 465.70,236.66 465.62,236.34 465.49,236.04 465.31,235.76 465.10,235.51 464.84,235.31 464.55,235.14 464.25,235.02 463.92,234.96 463.68,234.94 454.62,234.94 454.86,234.96 454.53,234.95 454.21,234.98 453.89,235.08 453.59,235.22 453.32,235.41 453.08,235.63 452.88,235.90 452.73,236.19 452.63,236.50 452.57,236.83 452.57,236.99 452.57,247.87 452.57,247.70 452.57,248.03 452.63,248.36 452.73,248.67 452.88,248.96 453.08,249.23 453.32,249.45 453.59,249.64 453.89,249.78 454.21,249.87 454.53,249.91' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='1' data-id='Feminino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e24' x='455.98' y='246.5' font-size='8.54pt' font-family='Arial' title='1' data-id='Feminino' tooltip_fill='white'>1<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e25' points='73.30,224.75 95.01,224.75 94.93,224.75 95.26,224.74 95.58,224.67 95.89,224.55 96.18,224.39 96.43,224.18 96.65,223.93 96.83,223.65 96.96,223.35 97.04,223.03 97.06,222.70 97.06,222.70 97.06,211.83 97.06,211.83 97.04,211.50 96.96,211.18 96.83,210.88 96.65,210.60 96.43,210.35 96.18,210.14 95.89,209.98 95.58,209.86 95.26,209.79 95.01,209.78 73.30,209.78 73.54,209.79 73.21,209.78 72.89,209.82 72.57,209.91 72.27,210.05 72.00,210.24 71.76,210.47 71.56,210.73 71.41,211.02 71.31,211.34 71.25,211.66 71.25,211.83 71.25,222.70 71.25,222.54 71.25,222.87 71.31,223.19 71.41,223.51 71.56,223.80 71.76,224.06 72.00,224.29 72.27,224.48 72.57,224.62 72.89,224.71 73.21,224.75' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='121' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e26' x='74.66' y='221.34' font-size='8.54pt' font-family='Arial' title='121' data-id='Masculino' tooltip_fill='white'>121<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e27' points='151.46,229.66 166.85,229.66 166.76,229.65 167.09,229.64 167.42,229.57 167.73,229.46 168.01,229.29 168.27,229.08 168.49,228.84 168.66,228.56 168.79,228.26 168.87,227.94 168.90,227.61 168.90,227.61 168.90,216.73 168.90,216.73 168.87,216.40 168.79,216.08 168.66,215.78 168.49,215.50 168.27,215.25 168.01,215.05 167.73,214.88 167.42,214.76 167.09,214.70 166.85,214.68 151.46,214.68 151.71,214.70 151.38,214.69 151.05,214.73 150.73,214.82 150.43,214.96 150.16,215.15 149.92,215.37 149.73,215.64 149.57,215.93 149.47,216.24 149.42,216.57 149.41,216.73 149.41,227.61 149.42,227.44 149.42,227.77 149.47,228.10 149.57,228.41 149.73,228.70 149.92,228.97 150.16,229.19 150.43,229.38 150.73,229.52 151.05,229.61 151.38,229.65' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='98' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e28' x='152.82' y='226.24' font-size='8.54pt' font-family='Arial' title='98' data-id='Masculino' tooltip_fill='white'>98<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e29' points='223.29,222.19 245.01,222.19 244.93,222.19 245.26,222.18 245.58,222.11 245.89,221.99 246.17,221.83 246.43,221.62 246.65,221.37 246.82,221.10 246.95,220.79 247.03,220.47 247.06,220.14 247.06,220.14 247.06,209.27 247.06,209.27 247.03,208.94 246.95,208.62 246.82,208.32 246.65,208.04 246.43,207.79 246.17,207.58 245.89,207.42 245.58,207.30 245.26,207.23 245.01,207.22 223.29,207.22 223.54,207.23 223.21,207.22 222.88,207.26 222.57,207.35 222.27,207.49 222.00,207.68 221.76,207.91 221.56,208.17 221.41,208.47 221.30,208.78 221.25,209.10 221.24,209.27 221.24,220.14 221.25,219.98 221.25,220.31 221.30,220.63 221.41,220.95 221.56,221.24 221.76,221.50 222.00,221.73 222.27,221.92 222.57,222.06 222.88,222.15 223.21,222.19' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='133' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e30' x='224.66' y='218.78' font-size='8.54pt' font-family='Arial' title='133' data-id='Masculino' tooltip_fill='white'>133<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e31' points='298.29,213.02 320.01,213.02 319.93,213.02 320.26,213.01 320.58,212.94 320.89,212.82 321.17,212.66 321.43,212.45 321.65,212.20 321.82,211.92 321.95,211.62 322.03,211.30 322.06,210.97 322.06,210.97 322.06,200.10 322.06,200.10 322.03,199.77 321.95,199.45 321.82,199.15 321.65,198.87 321.43,198.62 321.17,198.41 320.89,198.25 320.58,198.13 320.26,198.06 320.01,198.05 298.29,198.05 298.54,198.06 298.21,198.05 297.88,198.09 297.56,198.18 297.27,198.32 297.00,198.51 296.76,198.74 296.56,199.00 296.41,199.30 296.30,199.61 296.25,199.93 296.24,200.10 296.24,210.97 296.25,210.81 296.25,211.14 296.30,211.46 296.41,211.78 296.56,212.07 296.76,212.33 297.00,212.56 297.27,212.75 297.56,212.89 297.88,212.98 298.21,213.02' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='176' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e32' x='299.66' y='209.61' font-size='8.54pt' font-family='Arial' title='176' data-id='Masculino' tooltip_fill='white'>176<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e33' points='373.29,200.44 395.01,200.44 394.92,200.44 395.25,200.42 395.58,200.36 395.89,200.24 396.17,200.08 396.43,199.87 396.64,199.62 396.82,199.34 396.95,199.04 397.03,198.72 397.06,198.39 397.06,198.39 397.06,187.52 397.06,187.52 397.03,187.19 396.95,186.87 396.82,186.56 396.64,186.29 396.43,186.04 396.17,185.83 395.89,185.67 395.58,185.55 395.25,185.48 395.01,185.47 373.29,185.47 373.54,185.48 373.21,185.47 372.88,185.51 372.56,185.60 372.26,185.74 371.99,185.93 371.76,186.16 371.56,186.42 371.40,186.71 371.30,187.03 371.25,187.35 371.24,187.52 371.24,198.39 371.25,198.23 371.25,198.56 371.30,198.88 371.40,199.19 371.56,199.49 371.76,199.75 371.99,199.98 372.26,200.16 372.56,200.31 372.88,200.40 373.21,200.44' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='235' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e34' x='374.65' y='197.02' font-size='8.54pt' font-family='Arial' title='235' data-id='Masculino' tooltip_fill='white'>235<\/text>\n   <polygon id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e35' points='454.62,250.34 463.68,250.34 463.59,250.34 463.92,250.33 464.25,250.26 464.55,250.14 464.84,249.98 465.10,249.77 465.31,249.52 465.49,249.25 465.62,248.94 465.70,248.62 465.73,248.29 465.73,248.29 465.73,237.42 465.73,237.42 465.70,237.09 465.62,236.77 465.49,236.47 465.31,236.19 465.10,235.94 464.84,235.73 464.55,235.57 464.25,235.45 463.92,235.38 463.68,235.37 454.62,235.37 454.86,235.38 454.53,235.37 454.21,235.41 453.89,235.50 453.59,235.64 453.32,235.83 453.08,236.06 452.88,236.32 452.73,236.62 452.63,236.93 452.57,237.25 452.57,237.42 452.57,248.29 452.57,248.13 452.57,248.46 452.63,248.78 452.73,249.10 452.88,249.39 453.08,249.65 453.32,249.88 453.59,250.07 453.89,250.21 454.21,250.30 454.53,250.34' fill='#FFFFFF' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='round' title='1' data-id='Masculino' tooltip_fill='white'/>\n   <text id='svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_e36' x='455.98' y='246.93' font-size='8.54pt' font-family='Arial' title='1' data-id='Masculino' tooltip_fill='white'>1<\/text>\n   <rect x='44.78' y='65.72' width='453.74' height='185.79' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_9c501163_5999_4720_a2c6_20e4e57ee4cb_c1)'>\n   <text x='33.63' y='247.08' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='21.19' y='204.42' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>100<\/text>\n   <text x='21.19' y='161.77' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>200<\/text>\n   <text x='21.19' y='119.12' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>300<\/text>\n   <text x='21.19' y='76.47' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>400<\/text>\n   <polyline points='42.04,243.07 44.78,243.07' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,200.42 44.78,200.42' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,157.77 44.78,157.77' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,115.11 44.78,115.11' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='42.04,72.46 44.78,72.46' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='84.15,254.25 84.15,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='234.15,254.25 234.15,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='384.15,254.25 384.15,251.51' fill='none' stroke='#333333' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='71.71' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2020<\/text>\n   <text x='221.71' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2022<\/text>\n   <text x='371.71' y='264.46' font-size='8.4pt' font-weight='bold' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>2024<\/text>\n   <text x='258.05' y='279.58' font-size='10.5pt' font-weight='bold' font-family='Arial'>Ano<\/text>\n   <text transform='translate(15.50,195.95) rotate(-90.00)' font-size='10.5pt' font-weight='bold' font-family='Arial'>Frequência<\/text>\n   <rect x='166.27' y='26.53' width='210.77' height='28.24' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <text x='171.75' y='45.66' font-size='10.5pt' font-weight='bold' font-family='Arial'>SEXO<\/text>\n   <rect x='216.13' y='32' width='17.28' height='17.28' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <rect x='216.84' y='32.71' width='15.86' height='15.86' fill='#FF69B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt'/>\n   <rect x='294.09' y='32' width='17.28' height='17.28' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <rect x='294.8' y='32.71' width='15.86' height='15.86' fill='#4682B4' fill-opacity='1' stroke='#000000' stroke-opacity='1' stroke-width='1.07' stroke-linejoin='miter' stroke-linecap='butt'/>\n   <text x='238.89' y='44.65' font-size='8.4pt' font-weight='bold' font-family='Arial'>Feminino<\/text>\n   <text x='316.85' y='44.65' font-size='8.4pt' font-weight='bold' font-family='Arial'>Masculino<\/text>\n   <text x='154.36' y='17.51' font-size='12.6pt' font-weight='bold' font-family='Arial'>Distribuição de Sexo por Ano<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_9c501163_5999_4720_a2c6_20e4e57ee4cb","ratio":1.75,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tipos-de-meningite" class="level1">
+<h1>Tipos de Meningite</h1>
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+<div class="blue">
+<p>O gráfico apresenta o número de casos registrados por tipo de meningite em Belém-PA, evidenciando que a meningite asséptica foi a mais prevalente, com 479 casos, seguida por meningite causada por outras bactérias, totalizando 335 casos. Esses dois tipos somam a maior parte das ocorrências, indicando a relevância de investigar suas causas e melhorar estratégias de prevenção e controle. Meningite por outras etiologias (127 casos) e meningite tuberculosa (121 casos) também apresentam números expressivos, sugerindo atenção para casos de origem infecciosa. Já os tipos menos frequentes, como meningococcemia (5 casos) e meningite por Hemófilo (8 casos), apesar de baixos em números absolutos, merecem monitoramento devido ao seu impacto potencial na saúde pública. A distribuição reflete a diversidade das causas da doença na região e destaca a importância de políticas direcionadas para diagnóstico precoce e manejo efetivo.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="girafe html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-11bbfff6c0c8045c7178" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-11bbfff6c0c8045c7178">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='ggiraph-svg' role='graphics-document' id='svg_096a420f_95a4_4601_a0e4_1c95be833269' viewBox='0 0 504 360'>\n <defs id='svg_096a420f_95a4_4601_a0e4_1c95be833269_defs'>\n  <clipPath id='svg_096a420f_95a4_4601_a0e4_1c95be833269_c1'>\n   <rect x='0' y='0' width='504' height='360'/>\n  <\/clipPath>\n  <clipPath id='svg_096a420f_95a4_4601_a0e4_1c95be833269_c2'>\n   <rect x='156.31' y='16.85' width='343.7' height='320.25'/>\n  <\/clipPath>\n <\/defs>\n <g id='svg_096a420f_95a4_4601_a0e4_1c95be833269_rootg' class='ggiraph-svg-rootg'>\n  <g clip-path='url(#svg_096a420f_95a4_4601_a0e4_1c95be833269_c1)'>\n   <rect x='0' y='0' width='504' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round' class='ggiraph-svg-bg'/>\n   <rect x='0' y='0' width='504' height='360' fill='#FFFFFF' fill-opacity='1' stroke='#FFFFFF' stroke-opacity='1' stroke-width='0.78' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_096a420f_95a4_4601_a0e4_1c95be833269_c2)'>\n   <rect x='156.31' y='16.85' width='343.7' height='320.25' fill='#FFFFFF' fill-opacity='1' stroke='none'/>\n   <polyline points='188.93,337.10 188.93,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='254.16,337.10 254.16,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='319.39,337.10 319.39,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='384.62,337.10 384.62,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='449.85,337.10 449.85,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.19' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,318.26 500.01,318.26' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,286.87 500.01,286.87' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,255.47 500.01,255.47' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,224.07 500.01,224.07' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,192.68 500.01,192.68' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,161.28 500.01,161.28' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,129.88 500.01,129.88' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,98.49 500.01,98.49' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,67.09 500.01,67.09' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,35.69 500.01,35.69' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,337.10 156.31,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='221.55,337.10 221.55,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='286.78,337.10 286.78,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='352.01,337.10 352.01,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='417.24,337.10 417.24,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='482.47,337.10 482.47,16.85' fill='none' stroke='#DEDEDE' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e1' x='156.31' y='21.56' width='312.45' height='28.26' fill='#00008B' fill-opacity='1' stroke='none' title='Tipo: Meningite Asséptica &amp;lt;br&amp;gt;Casos: 479' data-id='Meningite Asséptica'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e2' x='156.31' y='178.55' width='47.62' height='28.26' fill='#9CB8D9' fill-opacity='1' stroke='none' title='Tipo: Meningite Meningocócica &amp;lt;br&amp;gt;Casos: 73' data-id='Meningite Meningocócica'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e3' x='156.31' y='241.34' width='44.36' height='28.26' fill='#9DBBDA' fill-opacity='1' stroke='none' title='Tipo: Meningite Meningocócica com Meningococcemia &amp;lt;br&amp;gt;Casos: 68' data-id='Meningite Meningocócica com Meningococcemia'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e4' x='156.31' y='115.75' width='78.93' height='28.26' fill='#90A3D0' fill-opacity='1' stroke='none' title='Tipo: Meningite Tuberculosa &amp;lt;br&amp;gt;Casos: 121' data-id='Meningite Tuberculosa'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e5' x='156.31' y='209.94' width='46.97' height='28.26' fill='#9CB9DA' fill-opacity='1' stroke='none' title='Tipo: Meningite não especificada &amp;lt;br&amp;gt;Casos: 72' data-id='Meningite não especificada'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e6' x='156.31' y='272.74' width='5.22' height='28.26' fill='#ACD7E5' fill-opacity='1' stroke='none' title='Tipo: Meningite por Hemófilo &amp;lt;br&amp;gt;Casos: 8' data-id='Meningite por Hemófilo'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e7' x='156.31' y='147.15' width='49.58' height='28.26' fill='#9BB7D9' fill-opacity='1' stroke='none' title='Tipo: Meningite por Pneumococo &amp;lt;br&amp;gt;Casos: 76' data-id='Meningite por Pneumococo'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e8' x='156.31' y='84.36' width='82.84' height='28.26' fill='#8EA0CF' fill-opacity='1' stroke='none' title='Tipo: Meningite por outra etiologia &amp;lt;br&amp;gt;Casos: 127' data-id='Meningite por outra etiologia'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e9' x='156.31' y='52.96' width='218.52' height='28.26' fill='#5145A7' fill-opacity='1' stroke='none' title='Tipo: Meningite por outras bactérias &amp;lt;br&amp;gt;Casos: 335' data-id='Meningite por outras bactérias'/>\n   <rect id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e10' x='156.31' y='304.13' width='3.26' height='28.26' fill='#ADD8E6' fill-opacity='1' stroke='none' title='Tipo: Meningococcemia &amp;lt;br&amp;gt;Casos: 5' data-id='Meningococcemia'/>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e11' x='471.62' y='38.75' font-size='6.4pt' font-family='Arial' title='Casos: 479' data-id='Meningite Asséptica'>479<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e12' x='205.83' y='195.73' font-size='6.4pt' font-family='Arial' title='Casos: 73' data-id='Meningite Meningocócica'>73<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e13' x='202.57' y='258.53' font-size='6.4pt' font-family='Arial' title='Casos: 68' data-id='Meningite Meningocócica com Meningococcemia'>68<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e14' x='238.09' y='132.94' font-size='6.4pt' font-family='Arial' title='Casos: 121' data-id='Meningite Tuberculosa'>121<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e15' x='205.18' y='227.13' font-size='6.4pt' font-family='Arial' title='Casos: 72' data-id='Meningite não especificada'>72<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e16' x='162.48' y='289.92' font-size='6.4pt' font-family='Arial' title='Casos: 8' data-id='Meningite por Hemófilo'>8<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e17' x='207.79' y='164.34' font-size='6.4pt' font-family='Arial' title='Casos: 76' data-id='Meningite por Pneumococo'>76<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e18' x='242' y='101.54' font-size='6.4pt' font-family='Arial' title='Casos: 127' data-id='Meningite por outra etiologia'>127<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e19' x='377.68' y='70.15' font-size='6.4pt' font-family='Arial' title='Casos: 335' data-id='Meningite por outras bactérias'>335<\/text>\n   <text id='svg_096a420f_95a4_4601_a0e4_1c95be833269_e20' x='160.53' y='321.32' font-size='6.4pt' font-family='Arial' title='Casos: 5' data-id='Meningococcemia'>5<\/text>\n   <rect x='156.31' y='16.85' width='343.7' height='320.25' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.78' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_096a420f_95a4_4601_a0e4_1c95be833269_c1)'>\n   <text x='101.19' y='320.55' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningococcemia<\/text>\n   <text x='86.97' y='289.16' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite por Hemófilo<\/text>\n   <text x='13.39' y='257.76' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite Meningocócica com Meningococcemia<\/text>\n   <text x='75.23' y='226.36' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite não especificada<\/text>\n   <text x='80.57' y='194.97' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite Meningocócica<\/text>\n   <text x='74.87' y='163.57' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite por Pneumococo<\/text>\n   <text x='88.39' y='132.17' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite Tuberculosa<\/text>\n   <text x='72.02' y='100.78' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite por outra etiologia<\/text>\n   <text x='66.7' y='69.38' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite por outras bactérias<\/text>\n   <text x='95.86' y='37.98' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>Meningite Asséptica<\/text>\n   <polyline points='154.32,318.26 156.31,318.26' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,286.87 156.31,286.87' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,255.47 156.31,255.47' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,224.07 156.31,224.07' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,192.68 156.31,192.68' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,161.28 156.31,161.28' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,129.88 156.31,129.88' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,98.49 156.31,98.49' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,67.09 156.31,67.09' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='154.32,35.69 156.31,35.69' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='156.31,339.09 156.31,337.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='221.55,339.09 221.55,337.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='286.78,339.09 286.78,337.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='352.01,339.09 352.01,337.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='417.24,339.09 417.24,337.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='482.47,339.09 482.47,337.10' fill='none' stroke='#B3B3B3' stroke-opacity='1' stroke-width='0.39' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='154.54' y='345.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>0<\/text>\n   <text x='216.21' y='345.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>100<\/text>\n   <text x='281.44' y='345.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>200<\/text>\n   <text x='346.67' y='345.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>300<\/text>\n   <text x='411.9' y='345.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>400<\/text>\n   <text x='477.13' y='345.27' font-size='4.8pt' font-family='Arial' fill='#4D4D4D' fill-opacity='1'>500<\/text>\n   <text x='295.93' y='354.33' font-size='6pt' font-family='Arial'>Número de Casos<\/text>\n   <text transform='translate(9.72,208.63) rotate(-90.00)' font-size='6pt' font-family='Arial'>Tipo de Meningite<\/text>\n   <text x='156.31' y='10.85' font-size='7.2pt' font-family='Arial'>Número de Casos por Tipo de Meningite<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_096a420f_95a4_4601_a0e4_1c95be833269","ratio":1.4,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"doc","opacity":0.9,"offx":10,"offy":10,"use_cursor_pos":true,"use_fill":false,"use_stroke":false,"delay_over":200,"delay_out":500},"hover":{"css":".hover_data_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_data_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_data_SVGID_ { fill:orange;stroke:black; }\nline.hover_data_SVGID_, polyline.hover_data_SVGID_ { fill:none;stroke:orange; }\nrect.hover_data_SVGID_, polygon.hover_data_SVGID_, path.hover_data_SVGID_ { fill:orange;stroke:none; }\nimage.hover_data_SVGID_ { stroke:orange; }","reactive":true,"nearest_distance":null},"hover_inv":{"css":""},"hover_key":{"css":".hover_key_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_key_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_key_SVGID_ { fill:orange;stroke:black; }\nline.hover_key_SVGID_, polyline.hover_key_SVGID_ { fill:none;stroke:orange; }\nrect.hover_key_SVGID_, polygon.hover_key_SVGID_, path.hover_key_SVGID_ { fill:orange;stroke:none; }\nimage.hover_key_SVGID_ { stroke:orange; }","reactive":true},"hover_theme":{"css":".hover_theme_SVGID_ { fill:orange;stroke:black;cursor:pointer; }\ntext.hover_theme_SVGID_ { stroke:none;fill:orange; }\ncircle.hover_theme_SVGID_ { fill:orange;stroke:black; }\nline.hover_theme_SVGID_, polyline.hover_theme_SVGID_ { fill:none;stroke:orange; }\nrect.hover_theme_SVGID_, polygon.hover_theme_SVGID_, path.hover_theme_SVGID_ { fill:orange;stroke:none; }\nimage.hover_theme_SVGID_ { stroke:orange; }","reactive":true},"select":{"css":".select_data_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_data_SVGID_ { stroke:none;fill:red; }\ncircle.select_data_SVGID_ { fill:red;stroke:black; }\nline.select_data_SVGID_, polyline.select_data_SVGID_ { fill:none;stroke:red; }\nrect.select_data_SVGID_, polygon.select_data_SVGID_, path.select_data_SVGID_ { fill:red;stroke:none; }\nimage.select_data_SVGID_ { stroke:red; }","type":"multiple","only_shiny":true,"selected":[]},"select_inv":{"css":""},"select_key":{"css":".select_key_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_key_SVGID_ { stroke:none;fill:red; }\ncircle.select_key_SVGID_ { fill:red;stroke:black; }\nline.select_key_SVGID_, polyline.select_key_SVGID_ { fill:none;stroke:red; }\nrect.select_key_SVGID_, polygon.select_key_SVGID_, path.select_key_SVGID_ { fill:red;stroke:none; }\nimage.select_key_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"select_theme":{"css":".select_theme_SVGID_ { fill:red;stroke:black;cursor:pointer; }\ntext.select_theme_SVGID_ { stroke:none;fill:red; }\ncircle.select_theme_SVGID_ { fill:red;stroke:black; }\nline.select_theme_SVGID_, polyline.select_theme_SVGID_ { fill:none;stroke:red; }\nrect.select_theme_SVGID_, polygon.select_theme_SVGID_, path.select_theme_SVGID_ { fill:red;stroke:none; }\nimage.select_theme_SVGID_ { stroke:red; }","type":"single","only_shiny":true,"selected":[]},"zoom":{"min":1,"max":1,"duration":300},"toolbar":{"position":"topright","pngname":"diagram","tooltips":null,"hidden":[],"delay_over":200,"delay_out":500},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+<script src="teste_files/libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

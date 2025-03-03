@@ -2,7 +2,8 @@
 
 # Carregando pacotes ------------------------------------------------------
 
-pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph, forcats, patchwork, kableExtra, ISOweek)
+pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph, forcats, patchwork, kableExtra, ISOweek, prophet,
+               xgboost)
 
 
 # Carregando dados --------------------------------------------------------
@@ -161,64 +162,174 @@ notifica_meningite$data <- as.Date(paste(notifica_meningite$ano,
 ####################################
 
 
-# Previsão de casos -------------------------------------------------------
-attach(Dados_Meningite)
-
-meningite <- Dados_Meningite |>
-  filter(CASO_CONFIRMADO == "Confirmado",
-    ano >= 2020) |> 
-  mutate(ano_mes = as.Date(paste0(year(DT_NOTIFIC), "-", 
-                                  month(DT_NOTIFIC), "-01"))) |> 
-  group_by(ano_mes) |> 
-  summarise(casos = n())
-
- 
-
-TS_Meningite <- ts(meningite$casos, start = c(2020,1), frequency = 12)
-
-TS_Meningite |> plot()
-
-modelo_meningite <- forecast::auto.arima(TS_Meningite, trace = TRUE)
-
-previsao_meningite <- forecast::forecast(modelo_meningite, h = 6)
-previsao_meningite |> plot(main = "Previsão de Casos de Meningite")
-
-
-ajuste_meningite <- seasonal::seas(TS_Meningite)
-ajuste_meningite |> plot()
-
-meningite_df <- data.frame(ajuste_meningite$data)
-
-TS_Meningite_Ajustado <- ts(meningite_df$final, start = c(2020, 1), frequency = 12)
-
-prev <- forecast::forecast(forecast::auto.arima(TS_Meningite_Ajustado), h = 12)
-
-prev |> plot()
-
-# Semana Epidemiologica ---------------------------------------------------
-
-meningite_epi <- Dados_Meningite |> 
-  filter(ano >= 2023) |> 
-  group_by(semana_epi, ano) |> 
-  summarise(soma = n(), .groups = "drop") |> 
-  mutate(data_inicio_semana = ISOweek2date(paste0(ano, "-W", sprintf("%02d", semana_epi), "-1"))) |> 
-  arrange(data_inicio_semana)
+# # Previsão de casos -------------------------------------------------------
+# attach(Dados_Meningite)
+# 
+# meningite <- Dados_Meningite |>
+#   filter(
+#     ano >= 2020) |> 
+#   mutate(ano_mes = as.Date(paste0(year(DT_NOTIFIC), "-", 
+#                                   month(DT_NOTIFIC), "-01"))) |> 
+#   group_by(ano_mes) |> 
+#   summarise(casos = n())
+# 
+#  
+# 
+# TS_Meningite <- ts(meningite$casos, start = c(2020,1), frequency = 12)
+# 
+# TS_Meningite |> plot()
+# 
+# modelo_meningite <- forecast::auto.arima(TS_Meningite, trace = TRUE)
+# 
+# previsao_meningite <- forecast::forecast(modelo_meningite, h = 6)
+# previsao_meningite |> plot(main = "Previsão de Casos de Meningite")
+# 
+# 
+# ajuste_meningite <- seasonal::seas(TS_Meningite)
+# ajuste_meningite |> plot()
+# 
+# meningite_df <- data.frame(ajuste_meningite$data)
+# 
+# TS_Meningite_Ajustado <- ts(meningite_df$final, start = c(2020, 1), frequency = 12)
+# 
+# prev <- forecast::forecast(forecast::auto.arima(TS_Meningite_Ajustado), h = 12)
+# 
+# prev |> plot()
 
 
 
-meningite |> 
-  ggplot(aes(x = ano_mes, y = casos)) +
-  geom_line()
+# Tabela de Variação ------------------------------------------------------
+
+tabela1 <- notifica_meningite |> 
+  arrange(ano, match(mes, c("janeiro", "fevereiro", "março", "abril", "maio", "junho", 
+                            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"))) |> 
+  group_by(mes) |> 
+  mutate(variacao_mes_ano_anterior = (Casos - lag(Casos)) / lag(Casos) * 100) |> 
+  ungroup() |> 
+  select(ano, mes, variacao_mes_ano_anterior) |> 
+  pivot_wider(names_from = mes, values_from = variacao_mes_ano_anterior) |> 
+  mutate(across(-ano, ~ ifelse(is.na(.), "-", sprintf("%.2f%%", .)))) |>
+  mutate(across(-ano, ~ ifelse(. == "-", "-", 
+                               ifelse(grepl("-", .), 
+                                      sprintf('<span style="color:red;">%s</span>', .), .)))) |> 
+  kable("html", caption = "Variação Percentual de Casos Comparada ao Mesmo Mês do Ano Anterior", escape = FALSE) |> 
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive")) |> 
+  row_spec(0, bold = TRUE, color = "black", background = "#4CAF50") |> 
+  column_spec(1, bold = TRUE) |> 
+  kable_classic_2()
 
 
 
 
-TS_Meningite_EPI <- ts(meningite_epi$soma, 
-                       start = c(min(meningite_epi$ano), min(meningite_epi$semana_epi)), 
-                       frequency = 52)
+
+tabela2 <- notifica_meningite |> 
+  arrange(ano, match(mes, c("janeiro", "fevereiro", "março", "abril", "maio", "junho", 
+                            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"))) |> 
+  mutate(variacao_mes_anterior = (Casos - lag(Casos)) / lag(Casos) * 100) |> 
+  ungroup() |> 
+  select(ano, mes, variacao_mes_anterior) |> 
+  pivot_wider(names_from = mes, values_from = variacao_mes_anterior) |> 
+  mutate(across(-ano, ~ ifelse(is.na(.), "-", sprintf("%.2f%%", .)))) |>
+  mutate(across(-ano, ~ ifelse(. == "-", "-", 
+                               ifelse(grepl("-", .), 
+                                      sprintf('<span style="color:red;">%s</span>', .), .)))) |> 
+  kable("html", caption = "Variação Percentual de Casos Comparada ao Mês Anterior", escape = FALSE) |> 
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive")) |> 
+  row_spec(0, bold = TRUE, color = "black", background = "#4CAF50") |> 
+  column_spec(1, bold = TRUE) |> 
+  kable_classic_2()
 
 
-TS_Meningite_EPI |> plot()
+
+
+tabela3 <- notifica_meningite |> 
+  arrange(ano, match(mes, c("janeiro", "fevereiro", "março", "abril", "maio", "junho", 
+                            "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"))) |> 
+  group_by(ano) |> 
+  mutate(casos_acumulados = cumsum(Casos)) |>  # Soma acumulada dos casos no ano
+  ungroup() |> 
+  group_by(mes) |> 
+  mutate(variacao_periodo_ano_anterior = (casos_acumulados - lag(casos_acumulados)) / lag(casos_acumulados) * 100) |> 
+  ungroup() |> 
+  select(ano, mes, variacao_periodo_ano_anterior) |> 
+  pivot_wider(names_from = mes, values_from = variacao_periodo_ano_anterior) |> 
+  mutate(across(-ano, ~ ifelse(is.na(.), "-", sprintf("%.2f%%", .)))) |>
+  mutate(across(-ano, ~ ifelse(. == "-", "-", 
+                               ifelse(grepl("-", .), 
+                                      sprintf('<span style="color:red;">%s</span>', .), .)))) |> 
+  kable("html", caption = "Variação Percentual do Período Acumulado em Relação ao Mesmo Período do Ano Anterior", escape = FALSE) |> 
+  kable_styling(full_width = FALSE, bootstrap_options = c("striped", "hover", "condensed", "responsive")) |> 
+  row_spec(0, bold = TRUE, color = "black", background = "steelblue") |> 
+  column_spec(1, bold = TRUE) |> 
+  kable_classic_2()
+
+
+
+
+
+
+
+# # Semana Epidemiologica ---------------------------------------------------
+# 
+# meningite_epi <- Dados_Meningite |> 
+#   filter(ano >= 2020) |> 
+#   group_by(semana_epi, ano) |> 
+#   summarise(soma = n(), .groups = "drop") |> 
+#   mutate(data_inicio_semana = ISOweek2date(paste0(ano, "-W", sprintf("%02d", semana_epi), "-1"))) |> 
+#   arrange(data_inicio_semana)
+# 
+# 
+# TS_Meningite_EPI <- ts(meningite_epi$soma, 
+#                        start = c(min(meningite_epi$ano), min(meningite_epi$semana_epi)), 
+#                        frequency = 52)
+# TS_Meningite_EPI |> plot()
+# 
+# # Modelo
+# pacf(TS_Meningite_EPI)
+# acf(TS_Meningite_EPI)
+# 
+# modelo_menin_epi <- forecast::tbats(menin_adj_ts)
+# modelo_menin_epi |> plot()
+# 
+# prev_menin_epi <- forecast::forecast(modelo_menin_epi, h = 10)
+# prev_menin_epi |> plot()
+
+
+# Teste com prophet -------------------------------------------------------
+
+# 
+# menin_prophet <- data.frame(ds = meningite_epi$data_inicio_semana, y = meningite_epi$soma)
+# modelo_menin_prophet <- prophet(menin_prophet)
+# 
+# 
+# futuro_menin <- make_future_dataframe(modelo_menin_prophet, periods = 52, freq = "week")
+# 
+# previsa_menin_prophet <- predict(modelo_menin_prophet, futuro_menin)
+# 
+# plot(modelo_menin_prophet, previsa_menin_prophet)
+# prophet_plot_components(modelo_menin_prophet, previsa_menin_prophet)
+# 
+# 
+# 
+# ggplot() +
+#   geom_line(data = menin_prophet, aes(x = ds, y = y), color = "blue", size = 1) +  # menin_prophet históricos em azul
+#   geom_line(data = previsa_menin_prophet, aes(x = as.Date(ds), y = yhat), color = "red", 
+#             size = 1, linetype = "dashed") +  # Previsões futuras em vermelho
+#   geom_ribbon(data = previsa_menin_prophet, aes(x = as.Date(ds),
+#                                                 ymin = yhat_lower, ymax = yhat_upper), 
+#               alpha = 0.2, fill = "red") +  # Intervalo de confiança
+#   geom_vline(xintercept = as.numeric(max(menin_prophet$ds)), 
+#              linetype = "dotted", color = "black", size = 1) +  # Linha vertical separando passado e futuro
+#   labs(title = "Previsão com Prophet", x = "Data", y = "Valores") +
+#   theme_minimal()
+# 
+
+
+
+
+
+
+
 
 
 
