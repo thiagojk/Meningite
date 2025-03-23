@@ -77,7 +77,7 @@ dygraph(casos_meningite_xts, main = "Casos de Meningite") |>
 
 
 ```
-
+ 
 ### Casos Anuais
 
 ```{=html}
@@ -89,7 +89,7 @@ div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
 O gráfico apresenta os casos de meningite em Belém entre 2020 e 2025, destacando variações significativas ao longo dos anos. Em 2020, foram registrados 830 casos, mas houve uma queda de 18,9% em 2021, totalizando 673 casos. Em 2022, os números voltaram a subir, registrando 829 casos, quase equivalente a 2020, com um aumento de 23,2% em relação ao ano anterior. Em 2023, houve um crescimento de 9,4%, atingindo 907 casos. Em 2024, o aumento foi ainda mais acentuado, de 22,1%, com 1.107 casos, o maior número registrado no período. No entanto, em 2025, observa-se uma redução abrupta para 22 casos, representando uma queda de 98% em comparação com 2024, o que pode indicar uma intervenção significativa ou uma alteração nos critérios de notificação.
 :::
 
-
+ 
 
 ```{r}
 #| echo: false

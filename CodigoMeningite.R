@@ -127,8 +127,8 @@ notifica_meningite <- Dados_Meningite |>
 
 
 write.csv2(notifica_meningite, file = "Meningococica.csv", fileEncoding = "latin1")
-
-# semana epidemiologica
+ 
+# semana epidemiologicayj vxxxx
 
 casos_semana_epi <- Dados_Meningite |> 
   group_by(ano, semana_epi) |> 
