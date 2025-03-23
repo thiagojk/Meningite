@@ -69,9 +69,11 @@ O gráfico apresenta o número de casos de meningite em Belém-PA ao longo do te
 dygraph(casos_meningite_xts, main = "Casos de Meningite") |> 
   dyAxis("y", label = "Número de Casos") |> 
   dyAxis("x", label = "Data") |> 
+  dyAnnotation(x = "2020-03-11", text = "Pandemia COVID-19", tooltip = "Casos") |> 
   dySeries("Casos", label = "Casos Notificados", color = "green") |> 
   dySeries("Casos_Confirmados", label = "Casos Confirmados", color = "red") |> 
-  dyOptions(stackedGraph = TRUE) # Não empilhar as séries
+  dyOptions(stackedGraph = TRUE) |> 
+  dyShading(from = "2020-03-11", to = "2023-05-05", color = "#CCEBD6")
 
 
 ```
@@ -93,6 +95,7 @@ O gráfico apresenta os casos de meningite em Belém entre 2020 e 2025, destacan
 #| echo: false
 #| warning: false
 #| fig-height: 3
+
 
 library(ggiraph)
 library(ggplot2)
@@ -128,6 +131,7 @@ grafico <- notifica_meningite |>
 
 
 girafe(ggobj = grafico)
+
 
 ```
 
@@ -216,6 +220,71 @@ girafe(ggobj = grafico_interativo)
 
 
 ```
+
+
+# Gráfico de controle
+
+
+
+```{=html}
+<style>
+div.blue { background-color:#C0BAE9; border-radius: 5px; padding: 25px;}
+</style>
+```
+::: blue
+
+
+:::
+
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-height: 4
+
+# Adiciona coluna tooltip com informações interativas
+dados_plot <- dados_plot %>%
+  mutate(
+    tooltip = paste0("Data: ", format(data, "%b/%Y"),
+                     "\nTipo: ", TIPO_MENINGITE,
+                     "\nCasos: ", soma)
+  )
+
+# Gráfico interativo
+barra_meningococica_interativo <- ggplot(dados_plot, aes(x = data, y = soma, fill = TIPO_MENINGITE)) +
+  geom_col_interactive(aes(tooltip = tooltip), position = "stack") +
+  geom_text_interactive(aes(label = soma, tooltip = tooltip), 
+                        position = position_stack(vjust = 0.5), 
+                        size = 3, color = "white") +
+  geom_hline(aes(yintercept = media_geral), 
+             linetype = "dashed", color = "black") +
+  geom_hline(aes(yintercept = limite_superior), 
+             linetype = "dotted", color = "red") +
+  geom_hline(aes(yintercept = limite_inferior), 
+             linetype = "dotted", color = "blue") +
+  scale_x_date(date_labels = "%b/%Y", date_breaks = "6 month") +
+  labs(
+    title = "Gráfico de Controle de Meningite por Tipo (Barras Empilhadas)",
+    x = "Data",
+    y = "Número de Casos",
+    fill = "Tipo de Meningite"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top")
+
+# Exibe como gráfico interativo
+girafe(ggobj = barra_meningococica_interativo,
+       width_svg = 10, height_svg = 6)
+
+
+```
+
+
+
+
+
 
 
 

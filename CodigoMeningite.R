@@ -3,21 +3,22 @@
 # Carregando pacotes ------------------------------------------------------
 
 pacman::p_load(tidyverse, rio, dygraphs, xts, ggiraph, forcats, patchwork, kableExtra, ISOweek, prophet,
-               xgboost)
+               xgboost, streamgraph)
 
 
 # Carregando dados --------------------------------------------------------
 
 Dados1 <- rio::import("Dados/MENINNET10.DBF")
-Dados2 <- rio::import("Dados/MENINNET.DBF")
+Dados2 <- rio::import("Dados/MENINNET2025.DBF")
+
 
 Dados_Meningite <- rbind(Dados1, Dados2)
 
 # Atualização do dashboard Looker Studio ----------------------------------
 # 
-# Dados_Meningite_Atualizado <- Dados_Meningite |> 
-#   select(-TP_NOT, -NM_CONTATO, -NU_TELEFON, -TEL_CONTAT, 
-#          -NU_DDD_TEL, -SOUNDEX, -ID_AGRAVO, -NM_PACIENT, 
+# Dados_Meningite_Atualizado <- dados_2025 |>
+#   select(-TP_NOT, -NM_CONTATO, -NU_TELEFON, -TEL_CONTAT,
+#          -NU_DDD_TEL, -SOUNDEX, -ID_AGRAVO, -NM_PACIENT,
 #          -FONETICA_N, -END_CONTAT)
 # 
 # write.csv2(Dados_Meningite_Atualizado, file = "Meningite Atualizado.csv")
@@ -124,6 +125,8 @@ notifica_meningite <- Dados_Meningite |>
   mutate(data = make_date(ano, mes, 1),
          incidencia = (Casos_Confirmados/1350000)*100000)
 
+
+write.csv2(notifica_meningite, file = "Meningococica.csv", fileEncoding = "latin1")
 
 # semana epidemiologica
 
@@ -324,6 +327,90 @@ tabela3 <- notifica_meningite |>
 #   theme_minimal()
 # 
 
+
+
+
+
+# QCC ---------------------------------------------------------------------
+
+
+
+# Criar boxplot dos casos de meningite por mês
+ggplot(notifica_meningite, aes(x = as.factor(ano), y = Casos)) +
+  geom_boxplot(fill = "lightblue", color = "black", outlier.color = "red", outlier.shape = 16) + 
+  geom_jitter(width = 0.2, alpha = 0.5, color = "black") + # Adiciona pontos individuais
+  labs(title = "Distribuição dos Casos de Meningite por Ano",
+       x = "Mês",
+       y = "Número de Casos") +
+  theme_classic()
+
+
+# 
+# notifica_meningite |> 
+#   tidyr::drop_na(TIPO_MENINGITE) |> 
+#   streamgraph("TIPO_MENINGITE", "Casos", "data", width=800, height=500) |> 
+#   sg_axis_x(tick_interval=1, tick_format="%Y-%m") |> 
+#   sg_fill_tableau() |> 
+#   sg_legend(show=TRUE, label = "names: ")
+# 
+
+# Graficos ----------------------------------------------------------------
+
+
+
+Meningococica <- Dados_Meningite |> 
+  filter(TIPO_MENINGITE %in% c("Meningite Meningocócica", 
+                               "Meningococcemia", 
+                               "Meningite Meningocócica com Meningococcemia"))
+
+
+
+dados_plot <- Meningococica %>% 
+  filter(ano >= 2020) |> 
+  group_by(ano, mes, TIPO_MENINGITE) %>% 
+  summarise(soma = n(), .groups = "drop") %>% 
+  mutate(
+    mes = str_to_title(as.character(mes)),
+    data = dmy(paste("01", mes, ano))
+  )
+
+# Calcula média e desvio padrão globais
+stats <- dados_plot %>% 
+  summarise(
+    media = mean(soma),
+    desvio = sd(soma)
+  )
+
+# Adiciona limites ao dataframe
+dados_plot <- dados_plot %>%
+  mutate(
+    limite_superior = stats$media + stats$desvio,
+    limite_inferior = stats$media - stats$desvio,
+    media_geral = stats$media
+  )
+
+
+# Gráfico de barras com valores e linhas de controle
+barra_meningococica <- ggplot(dados_plot, aes(x = data, y = soma, fill = TIPO_MENINGITE)) +
+  geom_col(position = "stack") +
+  geom_text(aes(label = soma), 
+            position = position_stack(vjust = 0.5), 
+            size = 3, color = "white") +
+  geom_hline(aes(yintercept = media_geral), 
+             linetype = "dashed", color = "black") +
+  geom_hline(aes(yintercept = limite_superior), 
+             linetype = "dotted", color = "red") +
+  geom_hline(aes(yintercept = limite_inferior), 
+             linetype = "dotted", color = "blue") +
+  scale_x_date(date_labels = "%b/%Y", date_breaks = "6 month") +
+  labs(
+    title = "Gráfico de Controle de Meningite por Tipo (Barras Empilhadas)",
+    x = "Data",
+    y = "Número de Casos",
+    fill = "Tipo de Meningite"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top")
 
 
 
